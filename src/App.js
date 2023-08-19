@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Splash from './components/Splash';
+import Registration from './auth/Registration';
+import Login from './auth/Login';
+import Home from './components/Home';
+import { AuthProvider } from './auth/AuthContext';
 
 function App() {
+  useEffect(() => {
+
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<Splash />} />
+            <Route exact path="/registration" element={<Registration />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/home" element={<Home />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }

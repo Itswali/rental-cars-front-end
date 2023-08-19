@@ -1,13 +1,50 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.splash {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffb400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url("../public/vespa.png");
+  background-position: center;
+  background-size: 40%;
+  background-repeat: no-repeat;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.splash img {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 20%;
+  height: auto;
+}
+
+.splash input {
+  width: 40%;
+  height: auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  box-shadow: 0 1px 2px 2px #96bf01;
+}
+
+.credentials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #96bf01;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 2rem;
+  width: 20%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.splash a {
+  text-decoration: none;
+  color: #fff;
 }
