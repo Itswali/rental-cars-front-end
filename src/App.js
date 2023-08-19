@@ -6,6 +6,7 @@ import Registration from './auth/Registration';
 import Login from './auth/Login';
 import Home from './components/Home';
 import { AuthProvider } from './auth/AuthContext';
+import AddItemForm from './action/additem';
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,8 @@ function App() {
             <Route exact path="/registration" element={<Registration />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/home" element={<Home />} />
+            <Route exact path="/add_item" element={<AddItemForm />} />
+
           </Routes>
         </BrowserRouter>
       </AuthProvider>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuth } from '../auth/AuthContext';
+import NavigationPanel from './NavigationPanel';
 
 export default function Home() {
   const { user } = useAuth();
@@ -16,6 +17,7 @@ export default function Home() {
 
       </div>
       )}
+      <NavigationPanel />
     </div>
   );
 }
