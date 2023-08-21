@@ -31,10 +31,11 @@ export default function Home() {
   };
   //  end logout method
 
+  // eslint-disable-next-line no-return-assign
   return (
     <div>
       <nav>
-        <button className="logout" onClick={logOut}>Logout</button>
+        <button type="button" className="logout" onClick={logOut}>Logout</button>
       </nav>
       { authenticated ? (
         <>
