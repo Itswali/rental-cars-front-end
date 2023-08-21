@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <div>
       <nav>
-        <button type="button" className="logout" onClick={logOut}>Logout</button>
+        <button type="button" className="logout credentials" onClick={logOut}>Logout</button>
       </nav>
       { authenticated ? (
         <>
