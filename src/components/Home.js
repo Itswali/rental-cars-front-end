@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import { useAuth } from '../auth/AuthContext';
 import NavigationPanel from './NavigationPanel';

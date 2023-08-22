@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React, { createContext, useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 
