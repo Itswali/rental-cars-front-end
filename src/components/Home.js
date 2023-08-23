@@ -7,19 +7,21 @@ export default function Home() {
   const { user } = useAuth();
 
   return (
-    <div>
-      <h1>Welcome to the Home Component</h1>
+    <div className="container">
+      {/* <h1>Welcome to the Home Component</h1> */}
       {user && (
-      <div>
+      <div className="alert alert-warning alert-dismissible fade show" role="alert">
         <p>
-          Email:
+          Welcome
+          {' '}
           {user.email}
         </p>
-
       </div>
       )}
-      <NavigationPanel />
-      <ItemsList />
+      <div className="home-layout">
+        <NavigationPanel />
+        <ItemsList />
+      </div>
     </div>
   );
 }

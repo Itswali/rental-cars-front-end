@@ -6,7 +6,7 @@ const NavigationPanel = () => {
   const [error, setError] = useState(null); // Add error state
 
   useEffect(() => {
-    fetch('http://127.0.0.1:3000/api/v1/navigation_links')
+    fetch('http://127.0.0.1:3001/api/v1/navigation_links')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -38,7 +38,7 @@ const NavigationPanel = () => {
 
   return (
     <nav>
-      <ul>
+      <ul className="nav flex-column">
         {navigationLinks.map((link) => (
           <li key={link.name}>
             <a href={link.link}>{link.name}</a>
