@@ -1,14 +1,14 @@
-// import React from 'react';
+import React from 'react';
 
-// const Reservation = () => {
-//   const hello = 'hello';
-//   return (
-//     <div>
-//       Reservations page.
-//       {' '}
-//       { hello }
-//     </div>
-//   );
-// };
+const Reservation = () => {
+  const hello = 'hello';
+  return (
+    <div>
+      Reservations page.
+      {' '}
+      { hello }
+    </div>
+  );
+};
 
-// export default Reservation;
+export default Reservation;
