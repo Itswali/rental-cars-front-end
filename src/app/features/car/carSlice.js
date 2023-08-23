@@ -8,7 +8,6 @@ const initialState = {
   isLoading: false,
   error: undefined,
   cars: [],
-  singleCar: {},
   reservations: [],
 };
 
