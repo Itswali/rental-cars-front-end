@@ -76,7 +76,6 @@ export const carSlice = createSlice({
 
     builder.addCase(addReservation.fulfilled, (state) => {
       state.isLoading = false;
-      console.log('Reservations works');
     });
 
     builder.addCase(addReservation.rejected, (state, action) => {

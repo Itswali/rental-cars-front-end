@@ -1,9 +1,8 @@
-// import React from 'react';
-import { React, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { fetchCars, addReservation } from '../app/features/car/carSlice';
-import { useAuth } from '../auth/AuthContext';
+// import { useAuth } from '../auth/AuthContext';
 
 const Reserve = () => {
   const { cars, isLoading } = useSelector((store) => store.car);
@@ -11,7 +10,7 @@ const Reserve = () => {
   const [city, setCity] = useState('');
   const [date, setDate] = useState('');
   const { carParam } = useParams();
-  const { user } = useAuth();
+  // const { user } = useAuth();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -20,7 +19,6 @@ const Reserve = () => {
   }, [dispatch]);
 
   const handleSelect = (e) => {
-    console.log(user);
     setCarId(e.target.value);
   };
 
@@ -30,14 +28,6 @@ const Reserve = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log('carId before set', carId);
-
-    // const useID = carParam ? carParam : carId;
-    // console.log('useID', useID);
-
-    // setCarId(useID);
-
-    // console.log('carId after set', carId);
 
     if (carId !== '' && date !== '') {
       try {
@@ -50,12 +40,12 @@ const Reserve = () => {
           },
         }));
       } catch (error) {
-        console.error('Error:', error);
+        throw new Error('Error:', error);
       }
 
       navigate('/reservations');
     } else {
-      console.log('select a car!!!');
+      throw new Error('select a car!!!');
     }
   };
 
