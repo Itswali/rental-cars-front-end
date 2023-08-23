@@ -9,7 +9,7 @@ const Reserve = () => {
   const [carId, setCarId] = useState('');
   const [city, setCity] = useState('');
   const [date, setDate] = useState('');
-  const { car_id } = useParams();
+  const { carParam } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -29,7 +29,7 @@ const Reserve = () => {
     e.preventDefault();
     // console.log('carId before set', carId);
 
-    // const useID = car_id ? car_id : carId;
+    // const useID = carParam ? carParam : carId;
     // console.log('useID', useID);
 
     // setCarId(useID);
@@ -40,7 +40,7 @@ const Reserve = () => {
       try {
         dispatch(addReservation({
           reservation: {
-            car_id: carId,
+            carParam: carId,
             city,
             date,
           },
@@ -70,11 +70,15 @@ const Reserve = () => {
           id="cars"
           onChange={handleSelect}
           // defaultValue={carId}
-          defaultValue={car_id || carId}
-          disabled={!!car_id}
+          defaultValue={carParam || carId}
+          disabled={!!carParam}
         >
-          {car_id
-            ? <option value={car_id}>{cars.find((obj) => obj.id === Number(car_id)).name}</option>
+          {carParam
+            ? (
+              <option value={carParam}>
+                {cars.find((obj) => obj.id === Number(carParam)).name}
+              </option>
+            )
             : (
               <>
                 <option value="">Select a car</option>
