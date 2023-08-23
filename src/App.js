@@ -27,7 +27,7 @@ function App() {
                       )
         }
         <Route exact path="/reserve" element={<Reserve />} />
-        <Route exact path="/reserve/:car_id" element={<Reserve />} />
+        <Route exact path="/reserve/:carParam" element={<Reserve />} />
         <Route exact path="/reservations" element={<Reservation />} />
       </Routes>
     </div>
