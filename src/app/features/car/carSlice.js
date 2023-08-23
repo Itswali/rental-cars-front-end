@@ -39,18 +39,18 @@ export const addReservation = createAsyncThunk('car/reserveCar', async (payload)
   }
 });
 
-// export const getReservations = createAsyncThunk('car/getReservation', async () => {
-//   try {
-//     const response = await axios.get(`${URL}/reservations`, {
-//       headers: {
-//         Authorization: `Bearer ${carsToken}`
-//       },
-//     });
-//     return response.data;
-//   } catch (err) {
-//     return err.message;
-//   }
-// });
+export const getReservations = createAsyncThunk('car/getReservation', async () => {
+  try {
+    const response = await axios.get(`${URL}/reservations`, {
+      headers: {
+        withCredentials: true,
+      },
+    });
+    return response.data;
+  } catch (err) {
+    return err.message;
+  }
+});
 
 export const carSlice = createSlice({
   name: 'car',
@@ -83,19 +83,19 @@ export const carSlice = createSlice({
       state.error = action.payload;
     });
 
-    // builder.addCase(getReservations.pending, (state) => {
-    //   state.isLoading = true;
-    // });
+    builder.addCase(getReservations.pending, (state) => {
+      state.isLoading = true;
+    });
 
-    // builder.addCase(getReservations.fulfilled, (state, action) => {
-    //   state.isLoading = false;
-    //   state.reservations = action.payload;
-    // });
+    builder.addCase(getReservations.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.reservations = action.payload;
+    });
 
-    // builder.addCase(getReservations.rejected, (state, action) => {
-    //   state.isLoading = false;
-    //   state.error = action.payload;
-    // });
+    builder.addCase(getReservations.rejected, (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+    });
   },
 });
 
