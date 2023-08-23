@@ -15,7 +15,6 @@ export const fetchCars = createAsyncThunk('car/getUCars', async () => {
   try {
     const response = await axios.get(`${URL}/items`, {
       headers: {
-        // Authorization: `Bearer ${carsToken}`,
         withCredentials: true,
       },
     });
@@ -27,18 +26,18 @@ export const fetchCars = createAsyncThunk('car/getUCars', async () => {
   }
 });
 
-// export const addReservation = createAsyncThunk('car/reserveCar', async (payload) => {
-//   try {
-//     const response = await axios.post(`${URL}/reservations`, payload, {
-//       headers: {
-//         Authorization: `Bearer ${carsToken}`,
-//       },
-//     });
-//     return response.data;
-//   } catch (err) {
-//     return err.message;
-//   }
-// });
+export const addReservation = createAsyncThunk('car/reserveCar', async (payload) => {
+  try {
+    const response = await axios.post(`${URL}/reservations`, payload, {
+      headers: {
+        withCredentials: true,
+      },
+    });
+    return response.data;
+  } catch (err) {
+    return err.message;
+  }
+});
 
 // export const getReservations = createAsyncThunk('car/getReservation', async () => {
 //   try {
