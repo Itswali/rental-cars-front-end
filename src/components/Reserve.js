@@ -2,7 +2,7 @@
 import { React, useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import { fetchCars } from '../app/features/car/carSlice';
+import { fetchCars, addReservation } from '../app/features/car/carSlice';
 
 const Reserve = () => {
   const { cars, isLoading } = useSelector((store) => store.car);
@@ -76,7 +76,7 @@ const Reserve = () => {
           {carParam
             ? (
               <option value={carParam}>
-                {cars.find((obj) => obj.id === Number(carParam)).name}
+                {cars.find((obj) => obj.id === carParam).attributes.title}
               </option>
             )
             : (
@@ -84,7 +84,7 @@ const Reserve = () => {
                 <option value="">Select a car</option>
                 {cars.map((car) => (
                   <option key={car.id} value={car.id}>
-                    {car.name}
+                    {car.attributes.title}
                   </option>
                 ))}
               </>
@@ -97,9 +97,10 @@ const Reserve = () => {
           onChange={(e) => setCity(e.target.value)}
           required
         />
-        <label>
+        <label htmlFor="date">
           Select a Date:
           <input
+            name="date"
             type="date"
             value={date}
             onChange={handleDateChange}
@@ -109,7 +110,7 @@ const Reserve = () => {
         <button
           type="submit"
           onClick={(e) => handleSubmit(e)}
-          className="add-new-book"
+          className="add-reservation"
         >
           Reserve
         </button>
