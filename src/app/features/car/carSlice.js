@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const URL = 'http://localhost:3000/api/v1';
-const carsToken = localStorage.getItem('carsToken');
+const URL = 'http://localhost:3001/api/v1';
+// const carsToken = localStorage.getItem('carsToken');
 
 const initialState = {
   isLoading: false,
@@ -13,12 +13,15 @@ const initialState = {
 
 export const fetchCars = createAsyncThunk('car/getUCars', async () => {
   try {
-    const response = await axios.get(`${URL}/cars`, {
+    const response = await axios.get(`${URL}/items`, {
       headers: {
-        Authorization: `Bearer ${carsToken}`,
+        // Authorization: `Bearer ${carsToken}`,
+        withCredentials: true,
       },
     });
-    return response.data;
+
+    // The serialized response has a 'data' array attribute
+    return response.data.data;
   } catch (err) {
     return err.message;
   }
