@@ -70,6 +70,20 @@ export const carSlice = createSlice({
       state.error = action.payload;
     });
 
+    builder.addCase(addReservation.pending, (state) => {
+      state.isLoading = true;
+    });
+
+    builder.addCase(addReservation.fulfilled, (state) => {
+      state.isLoading = false;
+      console.log('Reservations works');
+    });
+
+    builder.addCase(addReservation.rejected, (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+    });
+
     // builder.addCase(getReservations.pending, (state) => {
     //   state.isLoading = true;
     // });

@@ -3,6 +3,7 @@ import { React, useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { fetchCars, addReservation } from '../app/features/car/carSlice';
+import { useAuth } from '../auth/AuthContext';
 
 const Reserve = () => {
   const { cars, isLoading } = useSelector((store) => store.car);
@@ -10,6 +11,7 @@ const Reserve = () => {
   const [city, setCity] = useState('');
   const [date, setDate] = useState('');
   const { carParam } = useParams();
+  const { user } = useAuth();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -18,6 +20,7 @@ const Reserve = () => {
   }, [dispatch]);
 
   const handleSelect = (e) => {
+    console.log(user);
     setCarId(e.target.value);
   };
 
@@ -40,16 +43,17 @@ const Reserve = () => {
       try {
         dispatch(addReservation({
           reservation: {
-            carParam: carId,
+            user_id: 1,
+            item_id: carId,
             city,
-            date,
+            Date: date,
           },
         }));
       } catch (error) {
         console.error('Error:', error);
       }
 
-      navigate('/cars/reservations');
+      navigate('/reservations');
     } else {
       console.log('select a car!!!');
     }

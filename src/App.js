@@ -20,12 +20,13 @@ function App() {
         <Route exact path="/login" element={<Login />} />
 
         {
-                      authenticated ? (
-                        <Route exact path="/*" element={<Home />} />
-                      ) : (
-                        <Route exact path="*" element={<Splash />} />
-                      )
+          authenticated ? (
+            <Route exact path="/*" element={<Home />} />
+          ) : (
+            <Route exact path="*" element={<Splash />} />
+          )
         }
+
         <Route exact path="/reserve" element={<Reserve />} />
         <Route exact path="/reserve/:carParam" element={<Reserve />} />
         <Route exact path="/reservations" element={<Reservation />} />
