@@ -6,6 +6,8 @@ import Registration from './auth/Registration';
 import Login from './auth/Login';
 import Home from './components/Home';
 import { useAuth } from './auth/AuthContext';
+import Reservation from './components/Reservation';
+import Reserve from './components/Reserve';
 
 function App() {
   const { authenticated } = useAuth();
@@ -23,7 +25,10 @@ function App() {
                       ) : (
                         <Route exact path="*" element={<Splash />} />
                       )
-}
+        }
+        <Route exact path="/reserve" element={<Reserve />} />
+        <Route exact path="/reserve/:car_id" element={<Reserve />} />
+        <Route exact path="/reservations" element={<Reservation />} />
       </Routes>
     </div>
   );
