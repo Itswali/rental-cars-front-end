@@ -35,7 +35,6 @@ export default function Login() {
 
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
         setAuthenticated(true);
         setUser(data.user);
         navigate('/home');

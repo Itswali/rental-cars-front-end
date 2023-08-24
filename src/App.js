@@ -1,17 +1,17 @@
 import './App.css';
-import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Splash from './components/Splash';
 import Registration from './auth/Registration';
 import Login from './auth/Login';
 import Home from './components/Home';
 import { AuthProvider } from './auth/AuthContext';
 import AddItemForm from './action/additem';
+import { useAuth } from './auth/AuthContext';
 
 function App() {
-  useEffect(() => {
+  const { authenticated } = useAuth();
 
-  }, []);
   return (
     <div className="App">
       <AuthProvider>
@@ -26,6 +26,19 @@ function App() {
           </Routes>
         </BrowserRouter>
       </AuthProvider>
+      <Routes>
+        <Route exact path="/" element={<Splash />} />
+        <Route exact path="/registration" element={<Registration />} />
+        <Route exact path="/login" element={<Login />} />
+
+        {
+                      authenticated ? (
+                        <Route exact path="/*" element={<Home />} />
+                      ) : (
+                        <Route exact path="*" element={<Splash />} />
+                      )
+}
+      </Routes>
     </div>
   );
 }
