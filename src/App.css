@@ -1,27 +1,152 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	padding: 0;
+	font-family: "Rubik", sans-serif;
+	text-decoration: none;
+	list-style: none;
+	scroll-behavior: smooth;
 }
 
-.home-layout {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
+.fixed-sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 250px;
+	overflow-y: auto;
+	font-size: 12px;
+	font-weight: 200;
+	height: 100vh;
+	color: #e1ffff;
+	border-right: #f7f7f7 2px solid;
+	padding: 20px 0 0 10px;
+	display: flex;
+	flex-direction: column;
 }
 
-.home-title {
-  text-align: center;
+.content-container {
+	margin-left: 250px;
+	text-align: center;
+	padding: 100px;
+	position: relative;
 }
 
-.image-holder {
-  width: 250px;
-  height: 250px;
+.brand {
+	background-color: #ffffff;
+	height: 150px;
+}
+
+.brand img {
+	width: calc(100% - 20px);
+}
+
+.menu-list {
+	flex: 1;
+	/* Grow to fill the available space, pushing footer to the bottom */
+}
+
+.fixed-sidebar .menu-list li:hover {
+	padding: 5px 15px;
+	cursor: pointer;
+	color: white;
+	background-color: #0071bc;
+	border: 0;
+	margin: 0;
+  text-transform: uppercase;
+}
+
+.fixed-sidebar .menu-list li {
+	padding: 5px 15px;
+	cursor: pointer;
+	color: black;
+	background-color: white;
+	border: 0;
+	margin: 0;
+  text-transform: uppercase;
+}
+
+.footer {
+	margin-bottom: 20px;
+	width: calc(100% - 20px);
+}
+
+.fixed-sidebar .socials {
+	display: flex;
+	gap: 20px;
+	color: black;
+}
+
+small {
+	color: black;
+}
+
+/* .content-container {
+	text-align: center;
+	padding: 100px;
+	position: relative;
+} */
+
+hr.dotted {
+	border-top: 2px dotted #f7f7f7;
+	width: 100px;
+}
+
+.car-cards {
+	display: flex;
+	gap: 30px;
+}
+
+.card-item {
+	width: 300px;
+}
+
+.car-cards li img {
+	width: 100%;
+	background-color: #f7f7f7;
+	border-radius: 5px;
+}
+
+.car-cards-container {
+  display: flex;
   overflow: hidden;
-  border-radius: 50%;
+  position: relative;
 }
 
-.image-holder img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.car-cards {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+
+.prev-button {
+  left: 0;
+	background-color: #0071bc;
+	color: #ffffff;
+	width: 80px;
+  height: 60px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+	position: absolute;
+}
+
+.next-button {
+  right: 0;
+	background-color: #0071bc;
+	color: #ffffff;
+	width: 80px;
+  height: 60px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+	position: absolute;
 }
