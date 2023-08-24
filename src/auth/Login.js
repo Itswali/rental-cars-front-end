@@ -27,7 +27,11 @@ export default function Login() {
     };
 
     try {
+<<<<<<< HEAD
       const response = await fetch('http://127.0.0.1:3001/api/v1/login', {
+=======
+      const response = await fetch('http://localhost:3001/api/v1/login', {
+>>>>>>> navigation
         method: 'POST',
         headers,
         body: JSON.stringify(formData),
