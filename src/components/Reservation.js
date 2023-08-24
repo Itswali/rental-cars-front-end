@@ -13,17 +13,15 @@ const Reservation = () => {
   return (
     <div>
       List of reservations
+      <hr />
+      <br />
       <div>
         {reservations.map((item) => (
           <div key={item.id}>
             <p>{item.car_name}</p>
             <small>{item.city}</small>
-            <small>
-              {' '}
-              {'=>'}
-              {' '}
-              {item.date}
-            </small>
+            <br />
+            <small>{item.Date}</small>
             <hr />
           </div>
         ))}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { fetchCars, addReservation } from '../app/features/car/carSlice';
-// import { useAuth } from '../auth/AuthContext';
+import { useAuth } from '../auth/AuthContext';
 
 const Reserve = () => {
   const { cars, isLoading } = useSelector((store) => store.car);
@@ -10,15 +10,17 @@ const Reserve = () => {
   const [city, setCity] = useState('');
   const [date, setDate] = useState('');
   const { carParam } = useParams();
-  // const { user } = useAuth();
+  const { user } = useAuth();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log(user);
     dispatch(fetchCars());
-  }, [dispatch]);
+  }, [dispatch, user]);
 
   const handleSelect = (e) => {
+    console.log(user);
     setCarId(e.target.value);
   };
 
@@ -40,12 +42,12 @@ const Reserve = () => {
           },
         }));
       } catch (error) {
-        throw new Error('Error:', error);
+        console.log('Error:', error);
       }
 
       navigate('/reservations');
     } else {
-      throw new Error('select a car!!!');
+      console.log('select a car!!!');
     }
   };
 

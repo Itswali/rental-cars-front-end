@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext';
 
 export default function Home() {
@@ -37,6 +38,7 @@ export default function Home() {
       <nav>
         <button type="button" className="logout credentials" onClick={logOut}>Logout</button>
       </nav>
+      <Link to="/reserve">Reserve</Link>
       { authenticated ? (
         <>
           <h1>Welcome to the Home Component</h1>

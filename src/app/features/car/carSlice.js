@@ -2,7 +2,6 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const URL = 'http://localhost:3001/api/v1';
-// const carsToken = localStorage.getItem('carsToken');
 
 const initialState = {
   isLoading: false,
@@ -46,6 +45,8 @@ export const getReservations = createAsyncThunk('car/getReservation', async () =
         withCredentials: true,
       },
     });
+
+    // The serialized response has a 'data' array attribute
     return response.data;
   } catch (err) {
     return err.message;
