@@ -1,6 +1,9 @@
+/* eslint-disable linebreak-style */
 import React, {
-  createContext, useContext, useEffect, useState,
+  createContext, useContext, useState, useEffect,
 } from 'react';
+// eslint-disable-next-line no-unused-vars
+import PropTypes from 'prop-types';
 
 const AuthContext = createContext();
 
