@@ -39,7 +39,7 @@ const NavigationPanel = () => {
   return (
     <div className="fixed-sidebar">
       <div className="brand">
-        <img src="super-wheels-logo.png" alt="Logo" />
+        <img src="super-wheels-logo.svg" alt="Logo" />
       </div>
 
       <ul className="menu-list">

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Splash() {
   return (
     <div className="splash">
-      <img src="logo.png" alt="vespa img" />
+      <img src="super-wheels-white-logo.svg" alt="logo" />
       <Link to="/registration" className="credentials">
         Sign Up
       </Link>
@@ -13,6 +13,5 @@ export default function Splash() {
       </Link>
 
     </div>
-
   );
 }

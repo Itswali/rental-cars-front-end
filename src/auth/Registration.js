@@ -56,13 +56,13 @@ export default function Registration() {
         type="email"
         name="email"
         value={formData.email}
-        placeholder="Enter Email"
+        placeholder="Email"
         required
         onChange={handleChange}
       />
       <input
         type="password"
-        placeholder="Enter password"
+        placeholder="Password"
         required
         name="password"
         value={formData.password}

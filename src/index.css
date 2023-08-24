@@ -1,23 +1,50 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
 .splash {
   width: 100%;
   height: 100vh;
-  background-color: #ffb400;
+  margin: 0;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+}
+
+.splash::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0071bcf1;
+  z-index: -1;
+}
+
+.splash::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/splash-back-img.jpg');
   background-position: center;
-  background-size: 40%;
+  background-size: cover;
   background-repeat: no-repeat;
+  z-index: -2;
 }
 
 .splash img {
   position: absolute;
-  left: 1rem;
-  top: 1rem;
-  width: 20%;
-  height: auto;
+  left: 5%;
+  top: 5%;
+  width: 200px;
 }
 
 .splash input {
@@ -27,20 +54,25 @@
   border-radius: 0.5rem;
   margin-bottom: 1rem;
   border: none;
-  box-shadow: 0 1px 2px 2px #96bf01;
 }
 
 .credentials {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #96bf01;
+  background-color: #1b1464;
   color: #fff;
   font-size: 1rem;
+  border: 0;
   border-radius: 2rem;
   width: 20%;
   padding: 1rem;
   margin-bottom: 1rem;
+}
+
+.credentials:hover {
+  background-color: #fff;
+  color: #1b1464;
 }
 
 .splash a {

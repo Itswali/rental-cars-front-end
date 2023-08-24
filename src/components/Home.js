@@ -8,7 +8,6 @@ export default function Home() {
 
   return (
     <div>
-      {/* <h1>Welcome to the Home Component</h1> */}
       {user && (
       <div className="alert alert-warning alert-dismissible fade show" role="alert">
         <p>
