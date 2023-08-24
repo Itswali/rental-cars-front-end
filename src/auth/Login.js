@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
@@ -26,7 +27,7 @@ export default function Login() {
     };
 
     try {
-      const response = await fetch('http://localhost:3001/api/v1/login', {
+      const response = await fetch('http://127.0.0.1:3001/api/v1/login', {
         method: 'POST',
         headers,
         body: JSON.stringify(formData),

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
@@ -34,7 +35,9 @@ export default function Registration() {
 
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
+        const authToken = data.token; // Retrieve the token from the response
+        localStorage.setItem('authToken', authToken); // Store the token in localStorage
+
         setAuthenticated(true);
         setUser(data.user);
         navigate('/home');
@@ -46,6 +49,7 @@ export default function Registration() {
       console.error('Signup error:', error);
     }
   };
+
   return (
     <form className="splash" onSubmit={handleSubmit}>
       <input

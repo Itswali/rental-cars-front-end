@@ -1,5 +1,8 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import { useAuth } from '../auth/AuthContext';
+import NavigationPanel from './NavigationPanel';
+import ItemsList from './ItemsList';
 
 export default function Home() {
   const {
@@ -34,6 +37,7 @@ export default function Home() {
   // eslint-disable-next-line no-return-assign
   return (
     <div>
+<<<<<<< HEAD
       <nav>
         <button type="button" className="logout credentials" onClick={logOut}>Logout</button>
       </nav>
@@ -50,6 +54,20 @@ export default function Home() {
         : (
           <p>{window.location.href = '/'}</p>
         )}
+=======
+      <h1>Welcome to the Home Component</h1>
+      {user && (
+      <div>
+        <p>
+          Email:
+          {user.email}
+        </p>
+
+      </div>
+      )}
+      <NavigationPanel />
+      <ItemsList />
+>>>>>>> item-list
     </div>
   );
 }
