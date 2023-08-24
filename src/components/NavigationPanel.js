@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const NavigationPanel = () => {
   const [navigationLinks, setNavigationLinks] = useState([]);
@@ -39,9 +40,9 @@ const NavigationPanel = () => {
   return (
     <nav>
       <ul className="nav flex-column">
-        {navigationLinks.map((link) => (
+        {navigationLinks?.map((link) => (
           <li key={link.name}>
-            <a href={link.link}>{link.name}</a>
+            <Link href={link.link}>{link.name}</Link>
           </li>
         ))}
       </ul>
