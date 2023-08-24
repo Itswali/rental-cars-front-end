@@ -19,16 +19,13 @@
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off",
-<<<<<<< HEAD
     "react/prop-types": [
       "error",
       {
         "ignore": ["children"] // Add 'children' to the list of ignored props
       }
-    ]
-=======
+    ],
     "linebreak-style": ["error", "windows"] 
->>>>>>> navigation
   },
   "overrides": [
     {
