@@ -8,6 +8,7 @@ const Reservation = () => {
 
   useEffect(() => {
     dispatch(getReservations());
+    dispatch(getReservations());
   }, [dispatch]);
 
   return (

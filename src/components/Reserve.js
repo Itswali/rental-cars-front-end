@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import { fetchCars, addReservation } from '../app/features/car/carSlice';
+import { fetchCars, addReservation, getReservations } from '../app/features/car/carSlice';
 import { useAuth } from '../auth/AuthContext';
 
 const Reserve = () => {
@@ -45,6 +45,7 @@ const Reserve = () => {
         console.log('Error:', error);
       }
 
+      dispatch(getReservations());
       navigate('/reservations');
     } else {
       console.log('select a car!!!');
