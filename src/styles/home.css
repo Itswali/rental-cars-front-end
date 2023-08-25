@@ -151,7 +151,7 @@ RESERVATIONS
 .home-layout {
   width: 100vw;
   height: 100vh;
-  overflow: none;
+  overflow: hidden;
   display: flex;
 }
 
@@ -177,7 +177,27 @@ RESERVATIONS
 }
 
 .reservations-container {
-  border: solid 1px red;
   width: 97%;
   margin: 0 auto;
+}
+
+.reservation-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.res-img-box {
+  width: 7rem;
+  height: 7rem;
+}
+
+.res-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.res-item-details {
+  display: flex;
+  flex-direction: column;
 }

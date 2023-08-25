@@ -1,5 +1,5 @@
 import './App.css';
-import './home.css';
+import './styles/home.css';
 import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Splash from './components/Splash';

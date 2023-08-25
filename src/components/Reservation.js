@@ -15,14 +15,17 @@ const Reservation = () => {
       <h3 className="reservations-h3">My reservations</h3>
       <hr />
       <br />
-      <div>
+      <div className="reservation-item-box">
         {reservations?.map((item) => (
-          <div key={item.id}>
-            <p>{item.car_name}</p>
-            <small>{item.city}</small>
-            <br />
-            <small>{item.Date}</small>
-            <hr />
+          <div key={item.id} className="reservation-item">
+            <div className="res-img-box">
+              <img src={item.image} alt="Car" className="res-img" />
+            </div>
+            <div className="res-item-details">
+              <p className="res-item-name">{item.car_name}</p>
+              <small className="res-item-city">{item.city}</small>
+              <small className="res-item-date">{item.Date}</small>
+            </div>
           </div>
         ))}
 
