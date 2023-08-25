@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import './App.css';
 import './home.css';
 import React, { useEffect } from 'react';
@@ -7,10 +6,10 @@ import Splash from './components/Splash';
 import Registration from './auth/Registration';
 import Login from './auth/Login';
 import Home from './components/Home';
-import { useAuth } from './auth/AuthContext';
+import { useAuth, AuthProvider } from './auth/AuthContext';
 import Reservation from './components/Reservation';
 import Reserve from './components/Reserve';
-import { AuthProvider } from './auth/AuthContext';
+
 import AddItemForm from './action/additem';
 
 function App() {

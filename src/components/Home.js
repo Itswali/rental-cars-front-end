@@ -1,20 +1,20 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext';
 import NavigationPanel from './NavigationPanel';
 import ItemsList from './ItemsList';
 
 export default function Home() {
   const {
-    // eslint-disable-next-line no-unused-vars
     user, setUser, authenticated, setAuthenticated,
   } = useAuth();
   const headers = {
     'Content-Type': 'application/json',
     withCredentials: true,
   };
-  // eslint-disable-next-line no-unused-vars
+
+  const history = useHistory();
+
   const logOut = async () => {
     try {
       const response = await fetch('http://localhost:3001/api/v1/logout', {
@@ -26,7 +26,8 @@ export default function Home() {
         console.log('Logged out successfully');
         setUser(null);
         setAuthenticated(false);
-        window.location.href = '/';
+        // window.location.href = '/';
+        history.push('/');
       } else {
         const errorData = await response.json();
         console.error('logout error:', errorData);
@@ -35,30 +36,25 @@ export default function Home() {
       console.error('logout error:', error);
     }
   };
-  //  end logout method
 
-  // eslint-disable-next-line no-return-assign
+  if (!authenticated) {
+    history.push('/');
+    return null;
+  }
+
   return (
     <div>
-
       <nav>
         <button type="button" className="logout credentials" onClick={logOut}>Logout</button>
       </nav>
       <Link to="/reserve">Reserve</Link>
 
-      { authenticated ? (
-        <>
-          <h1>Welcome to the Home Component</h1>
-          <p>{user?.email}</p>
-          <p>
-            Logged in at:
-            {user?.created_at}
-          </p>
-        </>
-      )
-        : (
-          <p>{window.location.href = '/'}</p>
-        )}
+      <h1>Welcome to the Home Component</h1>
+      <p>{user?.email}</p>
+      <p>
+        Logged in at:
+        {user?.created_at}
+      </p>
 
       {user && (
       <div className="alert alert-warning alert-dismissible fade show" role="alert">
