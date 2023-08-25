@@ -153,23 +153,18 @@ TRY
 */
 
 .home-layout {
-  /* border: solid 2px green; */
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   display: flex;
 }
 .nav-div {
-  /* border: solid 2px red; */
   width: 20%;
-  /* height: 100%; */
 }
 
 .routes-div {
-  /* border: solid 5px blue; */
   width: 80%;
   overflow-x: scroll;
-  /* height: 100%; */
 }
 
 .fixed-sidebar {
@@ -177,7 +172,7 @@ TRY
   font-size: 12px;
   font-weight: 200;
   color: #e1ffff;
-  border-right: #c0bebe 2px solid; /* #f7f7f7 */
+  border-right: #c0bebe 2px solid;
   height: 100%;
   padding: 20px 0 0 10px;
   display: flex;
