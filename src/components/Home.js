@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext';
 import NavigationPanel from './NavigationPanel';
 import ItemsList from './ItemsList';
@@ -13,7 +13,7 @@ export default function Home() {
     withCredentials: true,
   };
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const logOut = async () => {
     try {
@@ -27,7 +27,7 @@ export default function Home() {
         setUser(null);
         setAuthenticated(false);
         // window.location.href = '/';
-        history.push('/');
+        navigate('/');
       } else {
         const errorData = await response.json();
         console.error('logout error:', errorData);
@@ -38,7 +38,7 @@ export default function Home() {
   };
 
   if (!authenticated) {
-    history.push('/');
+    navigate('/');
     return null;
   }
 

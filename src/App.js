@@ -1,7 +1,7 @@
 import './App.css';
 import './home.css';
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Splash from './components/Splash';
 import Registration from './auth/Registration';
 import Login from './auth/Login';
@@ -20,19 +20,19 @@ function App() {
   return (
     <div className="App">
       <AuthProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route exact path="/registration" element={<Registration />} />
-            <Route exact path="/login" element={<Login />} />
-            <Route exact path="/home" element={<Home />} />
-            <Route exact path="/add_item" element={<AddItemForm />} />
-            <Route exact path="/" element={<Splash />} />
+        {/* <BrowserRouter> */}
+        <Routes>
+          <Route exact path="/registration" element={<Registration />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/home" element={<Home />} />
+          <Route exact path="/add_item" element={<AddItemForm />} />
+          <Route exact path="/" element={<Splash />} />
 
-            <Route exact path="/reserve" element={<Reserve />} />
-            <Route exact path="/reserve/:carParam" element={<Reserve />} />
-            <Route exact path="/reservations" element={<Reservation />} />
+          <Route exact path="/reserve" element={<Reserve />} />
+          <Route exact path="/reserve/:carParam" element={<Reserve />} />
+          <Route exact path="/reservations" element={<Reservation />} />
 
-            {
+          {
               authenticated ? (
                 <Route exact path="/*" element={<Home />} />
               ) : (
@@ -40,8 +40,8 @@ function App() {
               )
             }
 
-          </Routes>
-        </BrowserRouter>
+        </Routes>
+        {/* </BrowserRouter> */}
       </AuthProvider>
     </div>
   );
