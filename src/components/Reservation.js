@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getReservations } from '../app/features/car/carSlice';
 
 const Reservation = () => {
-  const { reservations } = useSelector((store) => store.car);
+  const { reservations } = useSelector((store) => store?.car);
   const dispatch = useDispatch();
 
   useEffect(() => {
