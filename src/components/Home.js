@@ -6,7 +6,7 @@ import ItemsList from './ItemsList';
 
 export default function Home() {
   const {
-    user, setUser, authenticated, setAuthenticated,
+    setUser, authenticated, setAuthenticated,
   } = useAuth();
   const headers = {
     'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ export default function Home() {
       </nav>
       <Link to="/reserve">Reserve</Link>
 
-      <h1>Welcome to the Home Component</h1>
+      {/* <h1>Welcome to the Home Component</h1>
       <p>{user?.email}</p>
       <p>
         Logged in at:
@@ -64,7 +64,7 @@ export default function Home() {
           {user.email}
         </p>
       </div>
-      )}
+      )}  */}
       <div className="home-layout">
         <NavigationPanel />
         <ItemsList />
