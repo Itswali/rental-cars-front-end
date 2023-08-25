@@ -144,11 +144,8 @@ hr.dotted {
 }
 
 /*
-TRY
-TRY
-TRY
-TRY
-TRY
+RESERVE +
+RESERVATIONS
 */
 
 .home-layout {
@@ -177,4 +174,10 @@ TRY
   padding: 20px 0 0 10px;
   display: flex;
   flex-direction: column;
+}
+
+.reservations-container {
+  border: solid 1px red;
+  width: 97%;
+  margin: 0 auto;
 }

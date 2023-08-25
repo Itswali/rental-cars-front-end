@@ -11,7 +11,7 @@ const Reservation = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="reservations-container">
       <h3 className="reservations-h3">My reservations</h3>
       <hr />
       <br />
