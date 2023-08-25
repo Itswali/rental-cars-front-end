@@ -21,7 +21,6 @@
 
 .reserve-content {
   color: white;
-  border: solid 2px red;
   width: 100%;
   height: 100%;
   display: flex;
@@ -78,4 +77,8 @@
 option {
   background: white;
   color: black;
+}
+
+.showError {
+  color: red;
 }

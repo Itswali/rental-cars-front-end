@@ -8,16 +8,15 @@ const Reservation = () => {
 
   useEffect(() => {
     dispatch(getReservations());
-    dispatch(getReservations());
   }, [dispatch]);
 
   return (
     <div>
-      List of reservations
+      <h3 className="reservations-h3">My reservations</h3>
       <hr />
       <br />
       <div>
-        {reservations.map((item) => (
+        {reservations?.map((item) => (
           <div key={item.id}>
             <p>{item.car_name}</p>
             <small>{item.city}</small>

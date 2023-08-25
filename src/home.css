@@ -77,7 +77,6 @@ ITEM LIST
 */
 
 .content-container {
-  /* margin-left: 250px; */
   text-align: center;
   padding: 100px;
   position: relative;
@@ -155,16 +154,17 @@ TRY
 .home-layout {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow: none;
   display: flex;
 }
+
 .nav-div {
   width: 20%;
 }
 
 .routes-div {
   width: 80%;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .fixed-sidebar {

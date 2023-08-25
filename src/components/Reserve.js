@@ -10,6 +10,7 @@ const Reserve = () => {
   const [carId, setCarId] = useState('');
   const [city, setCity] = useState('');
   const [date, setDate] = useState('');
+  const [showError, setShowError] = useState();
   const { carParam } = useParams();
   const { user } = useAuth();
   const dispatch = useDispatch();
@@ -41,13 +42,13 @@ const Reserve = () => {
           },
         }));
       } catch (error) {
-        console.log('Error:', error);
+        setShowError(`Error occured: ${error}`);
       }
 
       dispatch(getReservations());
-      navigate('/reservations');
+      navigate('/home/my_reservations');
     } else {
-      console.log('select a car!!!');
+      setShowError('Please select a car and a date!');
     }
   };
 
@@ -62,6 +63,7 @@ const Reserve = () => {
       <div className="overlay" />
       <div className="reserve-content">
 
+        <span className="showError">{showError}</span>
         <h2 className="reserve-h2">BOOK A SUPER-WHEELS RIDE</h2>
         <hr className="reserve-hr" />
         <div className="message">Select a car, choose a date, enter a city, you&apos;re all set!</div>
@@ -71,7 +73,6 @@ const Reserve = () => {
             name="cars"
             id="cars"
             onChange={handleSelect}
-            // defaultValue={carId}
             defaultValue={carParam || carId}
             disabled={!!carParam}
             className="select-value"
@@ -119,6 +120,7 @@ const Reserve = () => {
           >
             Book Now
           </button>
+          <br />
         </form>
       </div>
     </div>
