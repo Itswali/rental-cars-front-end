@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 const NavigationPanel = () => {
   const [navigationLinks, setNavigationLinks] = useState([]);
@@ -38,15 +37,35 @@ const NavigationPanel = () => {
   }
 
   return (
-    <nav>
-      <ul className="nav flex-column">
-        {navigationLinks?.map((link) => (
+    <div className="fixed-sidebar">
+      <div className="brand">
+        <img src="super-wheels-logo.svg" alt="Logo" />
+      </div>
+
+      <ul className="menu-list">
+        {navigationLinks.map((link) => (
           <li key={link.name}>
-            <Link href={link.link}>{link.name}</Link>
+            <h3><a href={link.link}>{link.name}</a></h3>
           </li>
         ))}
       </ul>
-    </nav>
+
+      <div className="footer">
+        <div className="socials">
+          <i className="bi bi-twitter" />
+          <i className="bi bi-facebook" />
+          <i className="bi bi-linkedin" />
+          <i className="bi bi-github" />
+          <i className="bi bi-instagram" />
+        </div>
+        <br />
+        <small>
+          © 2023 SUPER WHEELS CAR RENTALS.
+          <br />
+          ALL RIGHTS RESERVED.
+        </small>
+      </div>
+    </div>
   );
 };
 

@@ -1,4 +1,6 @@
+/* eslint-disable linebreak-style */
 import './App.css';
+import './home.css';
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Splash from './components/Splash';
