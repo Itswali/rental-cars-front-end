@@ -47,7 +47,7 @@ const NavigationPanel = () => {
               <Link to={link.link} className="credentials">{link.name}</Link>
             </li>
           ))
-         }
+        }
       </ul>
     </nav>
   );

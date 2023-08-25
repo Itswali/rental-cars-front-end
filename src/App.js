@@ -14,7 +14,6 @@ function App() {
 
   return (
     <div className="App">
-
       <Routes>
         <Route exact path="/" element={<Splash />} />
         <Route exact path="/registration" element={<Registration />} />
