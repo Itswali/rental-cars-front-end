@@ -3,24 +3,24 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { fetchCars, addReservation, getReservations } from '../app/features/car/carSlice';
 import { useAuth } from '../auth/AuthContext';
+import '../styles/reserve.css';
 
 const Reserve = () => {
   const { cars, isLoading } = useSelector((store) => store.car);
   const [carId, setCarId] = useState('');
   const [city, setCity] = useState('');
   const [date, setDate] = useState('');
+  const [showError, setShowError] = useState();
   const { carParam } = useParams();
   const { user } = useAuth();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(user);
     dispatch(fetchCars());
   }, [dispatch, user]);
 
   const handleSelect = (e) => {
-    console.log(user);
     setCarId(e.target.value);
   };
 
@@ -42,13 +42,13 @@ const Reserve = () => {
           },
         }));
       } catch (error) {
-        console.log('Error:', error);
+        setShowError(`Error occured: ${error}`);
       }
 
       dispatch(getReservations());
-      navigate('/reservations');
+      navigate('/home/my_reservations');
     } else {
-      console.log('select a car!!!');
+      setShowError('Please select a car and a date!');
     }
   };
 
@@ -59,60 +59,70 @@ const Reserve = () => {
   }
 
   return (
-    <div>
-      select car
-      <form>
-        <select
-          name="cars"
-          id="cars"
-          onChange={handleSelect}
-          // defaultValue={carId}
-          defaultValue={carParam || carId}
-          disabled={!!carParam}
-        >
-          {carParam
-            ? (
-              <option value={carParam}>
-                {cars.find((obj) => obj.id === carParam).attributes.title}
-              </option>
-            )
-            : (
-              <>
-                <option value="">Select a car</option>
-                {cars.map((car) => (
-                  <option key={car.id} value={car.id}>
-                    {car.attributes.title}
-                  </option>
-                ))}
-              </>
-            )}
-        </select>
-        <input
-          type="text"
-          placeholder="city"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-          required
-        />
-        <label htmlFor="date">
-          Select a Date:
+    <div className="reserve-container">
+      <div className="overlay" />
+      <div className="reserve-content">
+
+        <span className="showError">{showError}</span>
+        <h2 className="reserve-h2">BOOK A SUPER-WHEELS RIDE</h2>
+        <hr className="reserve-hr" />
+        <div className="message">Select a car, choose a date, enter a city, you&apos;re all set!</div>
+
+        <form>
+          <select
+            name="cars"
+            id="cars"
+            onChange={handleSelect}
+            defaultValue={carParam || carId}
+            disabled={!!carParam}
+            className="select-value"
+          >
+            {carParam
+              ? (
+                <option value={carParam}>
+                  {cars.find((obj) => obj.id === carParam).attributes.title}
+                </option>
+              )
+              : (
+                <>
+                  <option value="">Select a car</option>
+                  {cars.map((car) => (
+                    <option key={car.id} value={car.id}>
+                      {car.attributes.title}
+                    </option>
+                  ))}
+                </>
+              )}
+          </select>
+          <label htmlFor="date">
+            <input
+              name="date"
+              type="date"
+              value={date}
+              onChange={handleDateChange}
+              className="select-value"
+              required
+            />
+          </label>
           <input
-            name="date"
-            type="date"
-            value={date}
-            onChange={handleDateChange}
+            type="text"
+            placeholder="city"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            className="select-value"
             required
           />
-        </label>
-        <button
-          type="submit"
-          onClick={(e) => handleSubmit(e)}
-          className="add-reservation"
-        >
-          Reserve
-        </button>
-      </form>
-
+          <br />
+          <button
+            type="submit"
+            onClick={(e) => handleSubmit(e)}
+            className="add-reservation"
+          >
+            Book Now
+          </button>
+          <br />
+        </form>
+      </div>
     </div>
   );
 };
