@@ -25,8 +25,7 @@
       {
         "ignore": ["children"] // Add 'children' to the list of ignored props
       }
-    ],
-    "linebreak-style": ["error", "windows"] 
+    ] 
   },
   "overrides": [
     {
