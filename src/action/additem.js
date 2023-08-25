@@ -1,15 +1,16 @@
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AddItemForm = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [imageURL, setImageURL] = useState(''); // New state for image URL
+  const history = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const response = await fetch('http://127.0.0.1:3001/api/v1/items', {
       method: 'POST',
       headers: {
@@ -22,6 +23,7 @@ const AddItemForm = () => {
     if (response.ok) {
       // Item created successfully, you can handle redirects or UI updates here
       console.log('Item created successfully');
+      history('/home');
     } else {
       const data = await response.json();
       console.error('Error creating item:', data.errors);

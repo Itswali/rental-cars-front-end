@@ -5,7 +5,7 @@ const ItemsList = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:3000/api/v1/items')
+    fetch('http://127.0.0.1:3001/api/v1/items')
       .then((response) => response.json())
       .then((data) => setItems(data.data));
   }, []);
@@ -15,18 +15,47 @@ const ItemsList = () => {
   };
 
   return (
-    <div>
-      <h2>Items List</h2>
-      <ul>
-        {items.map((item) => (
-          <li key={item.id}>
-            <h3>{item.attributes.title}</h3>
-            <p>{item.attributes.description}</p>
-            <img src={item.attributes.image_url} alt={item.attributes.title} />
-            <DeleteItemButton itemId={item.id} onDelete={() => handleDelete(item.id)} />
-          </li>
-        ))}
-      </ul>
+    <div className="content-container">
+      <div className="heading">
+        <h1>ALL VEHICLE MODELS</h1>
+        <p>Please select a vehicle model</p>
+        <hr className="dotted" />
+        <br />
+      </div>
+
+      <div className="car-cards-container">
+        <div className="car-cards">
+          {items.map((item) => (
+            <li className="card-item" key={item.id}>
+              <img
+                src={item.attributes.image_url}
+                alt={item.attributes.title}
+              />
+              <h4>{item.attributes.title}</h4>
+              <hr className="dotted" />
+              <p>{item.attributes.description}</p>
+              <DeleteItemButton
+                itemId={item.id}
+                onDelete={() => handleDelete(item.id)}
+              />
+            </li>
+          ))}
+        </div>
+      </div>
+      <button
+        className="scroll-button prev-button"
+        type="button"
+        aria-label="Scroll left"
+      >
+        <i className="bi bi-caret-left" />
+      </button>
+      <button
+        className="scroll-button next-button"
+        type="button"
+        aria-label="Scroll right"
+      >
+        <i className="bi bi-caret-right" />
+      </button>
     </div>
   );
 };
