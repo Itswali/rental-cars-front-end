@@ -11,6 +11,7 @@ import Reservation from './components/Reservation';
 import Reserve from './components/Reserve';
 
 import AddItemForm from './action/additem';
+import ItemsList from './components/ItemsList';
 
 function App() {
   const { authenticated } = useAuth();
@@ -24,21 +25,26 @@ function App() {
         <Routes>
           <Route exact path="/registration" element={<Registration />} />
           <Route exact path="/login" element={<Login />} />
-          <Route exact path="/home" element={<Home />} />
-          <Route exact path="/add_item" element={<AddItemForm />} />
-          <Route exact path="/" element={<Splash />} />
-
-          <Route exact path="/reserve" element={<Reserve />} />
-          <Route exact path="/reserve/:carParam" element={<Reserve />} />
-          <Route exact path="/reservations" element={<Reservation />} />
-
+          <Route path="/home" element={<Home />}>
+            <Route index element={<ItemsList />} />
+            <Route path="add_item" element={<AddItemForm />} />
+            <Route path="reserve" element={<Reserve />} />
+            <Route path="reserve/:carParam" element={<Reserve />} />
+            <Route path="my_reservations" element={<Reservation />} />
+            {/* <Route path="add_item" element={<h2>Add an item</h2>} />
+            <Route path="reserve" element={<h2>reserve an item</h2>} />
+            <Route path="reserve/:carParam" element={<h2>still reserve an item</h2>} />
+            <Route path="my_reservations" element={<h2>reservations</h2>} /> */}
+          </Route>
           {
               authenticated ? (
-                <Route exact path="/*" element={<Home />} />
+                <Route path="/*" element={<Home />} />
               ) : (
-                <Route exact path="*" element={<Splash />} />
+                <Route path="*" element={<Splash />} />
               )
             }
+
+          <Route exact path="/" element={<Splash />} />
 
         </Routes>
         {/* </BrowserRouter> */}

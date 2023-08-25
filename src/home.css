@@ -1,4 +1,4 @@
-.fixed-sidebar {
+/* .fixed-sidebar {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
   padding: 20px 0 0 10px;
   display: flex;
   flex-direction: column;
-}
+} */
 
 .brand {
   background-color: #fff;
@@ -72,8 +72,12 @@ small {
   color: black;
 }
 
+/*
+ITEM LIST
+*/
+
 .content-container {
-  margin-left: 250px;
+  /* margin-left: 250px; */
   text-align: center;
   padding: 100px;
   position: relative;
@@ -138,4 +142,44 @@ hr.dotted {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   position: absolute;
+}
+
+/*
+TRY
+TRY
+TRY
+TRY
+TRY
+*/
+
+.home-layout {
+  /* border: solid 2px green; */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+.nav-div {
+  /* border: solid 2px red; */
+  width: 20%;
+  /* height: 100%; */
+}
+
+.routes-div {
+  /* border: solid 5px blue; */
+  width: 80%;
+  overflow-x: scroll;
+  /* height: 100%; */
+}
+
+.fixed-sidebar {
+  overflow-y: auto;
+  font-size: 12px;
+  font-weight: 200;
+  color: #e1ffff;
+  border-right: #c0bebe 2px solid; /* #f7f7f7 */
+  height: 100%;
+  padding: 20px 0 0 10px;
+  display: flex;
+  flex-direction: column;
 }

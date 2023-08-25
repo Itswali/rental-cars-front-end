@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Logo from './super-wheels-logo.svg';
 
 const NavigationPanel = () => {
   const [navigationLinks, setNavigationLinks] = useState([]);
@@ -60,7 +61,7 @@ const NavigationPanel = () => {
   return (
     <div className="fixed-sidebar">
       <div className="brand">
-        <img src="super-wheels-logo.svg" alt="Logo" />
+        <img src={Logo} alt="Logo" />
       </div>
 
       <ul className="menu-list">
