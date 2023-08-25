@@ -89,9 +89,10 @@ hr.dotted {
 }
 
 .car-cards li img {
-  width: 100%;
+  width: 50%;
+  height: 50%;
   background-color: #f7f7f7;
-  border-radius: 5px;
+  border-radius: 50%;
 }
 
 .car-cards-container {

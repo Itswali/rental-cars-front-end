@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const NavigationPanel = () => {
   const [navigationLinks, setNavigationLinks] = useState([]);
@@ -23,6 +24,26 @@ const NavigationPanel = () => {
       });
   }, []);
 
+  // eslint-disable-next-line no-unused-vars
+  const logOut = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/api/v1/logout', {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        console.log('Logged out successfully');
+        window.location.href = '/';
+      } else {
+        const errorData = await response.json();
+        console.error('logout error:', errorData);
+      }
+    } catch (error) {
+      console.error('logout error:', error);
+    }
+  };
+  //  end logout method
+
   if (loading) {
     return <p>Loading...</p>;
   }
@@ -43,9 +64,17 @@ const NavigationPanel = () => {
       </div>
 
       <ul className="menu-list">
-        {navigationLinks.map((link) => (
+        {navigationLinks?.map((link) => (
           <li key={link.name}>
-            <h3><a href={link.link}>{link.name}</a></h3>
+            <h3>
+              {link.name === 'Sign Out' ? (
+                <Link to={link.link} onClick={logOut}>
+                  {link.name}
+                </Link>
+              ) : (
+                <Link to={link.link}>{link.name}</Link>
+              )}
+            </h3>
           </li>
         ))}
       </ul>

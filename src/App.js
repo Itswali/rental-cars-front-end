@@ -19,12 +19,11 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Routes>
-            <Route exact path="/" element={<Splash />} />
             <Route exact path="/registration" element={<Registration />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/home" element={<Home />} />
             <Route exact path="/add_item" element={<AddItemForm />} />
-
+            <Route exact path="/" element={<Splash />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
