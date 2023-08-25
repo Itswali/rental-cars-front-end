@@ -5,7 +5,7 @@ import Splash from './components/Splash';
 import Registration from './auth/Registration';
 import Login from './auth/Login';
 import Home from './components/Home';
-import { AuthProvider, useAuth } from './auth/AuthContext';
+import { AuthProvider } from './auth/AuthContext';
 import AddItemForm from './action/additem';
 
 function App() {
