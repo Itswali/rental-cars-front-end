@@ -51,12 +51,14 @@ const AddItemForm = () => {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 className="item-select-value"
+                placeholder="Enter Car Name"
               />
               <label>Image URL:</label>
               <input
                 type="text"
                 value={imageURL}
                 className="item-select-value"
+                placeholder="Enter Image Url"
                 onChange={(e) => setImageURL(e.target.value)}
               />
             </div>
@@ -65,6 +67,7 @@ const AddItemForm = () => {
               rows="10"
               cols="50"
               value={description}
+              placeholder="Enter Some car description"
               onChange={(e) => setDescription(e.target.value)}
               className="item-select-value"
             />

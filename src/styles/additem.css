@@ -74,6 +74,10 @@
   outline: solid 2px white;
 }
 
+.item-select-value::placeholder {
+    color: #ccc;
+}
+
 textarea {
   resize: vertical;
   border-radius: 0;
