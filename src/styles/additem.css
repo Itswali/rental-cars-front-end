@@ -1,0 +1,95 @@
+
+.item-container {
+  color: white;
+  width: 100%;
+  height: 100%;
+  background: transparent url("../splash-back-img.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0071bcf1;
+  opacity: 0.95;
+}
+
+.item-content {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+}
+
+.item-hr {
+  color: white;
+  background: white;
+  width: 50%;
+  height: 1px;
+  border-radius: 4px;
+}
+
+.item-content h2 {
+  margin-top: 0;
+}
+
+.form-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.input-div {
+  display: flex;
+  align-items: center;
+}
+
+.form-container label {
+  font-weight: bold;
+}
+
+.item-select-value {
+  border-radius: 4rem;
+  background: transparent;
+  color: white;
+  margin: 1rem 0.5rem;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  outline: solid 2px white;
+}
+
+textarea {
+  resize: vertical;
+  border-radius: 0;
+  padding: 1rem;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
