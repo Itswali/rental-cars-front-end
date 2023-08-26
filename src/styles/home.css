@@ -1,20 +1,3 @@
-/* .fixed-sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 250px;
-  overflow-y: auto;
-  font-size: 12px;
-  font-weight: 200;
-  height: 100vh;
-  color: #e1ffff;
-  border-right: #f7f7f7 2px solid;
-  padding: 20px 0 0 10px;
-  display: flex;
-  flex-direction: column;
-} */
-
 .brand {
   background-color: #fff;
   height: 150px;
@@ -141,63 +124,4 @@ hr.dotted {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   position: absolute;
-}
-
-/*
-RESERVE +
-RESERVATIONS
-*/
-
-.home-layout {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-}
-
-.nav-div {
-  width: 20%;
-}
-
-.routes-div {
-  width: 80%;
-  overflow-x: auto;
-}
-
-.fixed-sidebar {
-  overflow-y: auto;
-  font-size: 12px;
-  font-weight: 200;
-  color: #e1ffff;
-  border-right: #c0bebe 2px solid;
-  height: 100%;
-  padding: 20px 0 0 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.reservations-container {
-  width: 97%;
-  margin: 0 auto;
-}
-
-.reservation-item {
-  display: flex;
-  gap: 1rem;
-}
-
-.res-img-box {
-  width: 7rem;
-  height: 7rem;
-}
-
-.res-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.res-item-details {
-  display: flex;
-  flex-direction: column;
 }
