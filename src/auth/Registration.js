@@ -52,17 +52,19 @@ export default function Registration() {
 
   return (
     <form className="splash" onSubmit={handleSubmit}>
+      <img src="super-wheels-white-logo.svg" alt="logo" />
+
       <input
         type="email"
         name="email"
         value={formData.email}
-        placeholder="Enter Email"
+        placeholder="Email"
         required
         onChange={handleChange}
       />
       <input
         type="password"
-        placeholder="Enter password"
+        placeholder="Password"
         required
         name="password"
         value={formData.password}
