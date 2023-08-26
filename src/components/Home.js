@@ -1,45 +1,62 @@
-/* eslint-disable no-console */
-/* eslint-disable linebreak-style */
 import React from 'react';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext';
 import NavigationPanel from './NavigationPanel';
-import ItemsList from './ItemsList';
+// import ItemsList from './ItemsList';
 
 export default function Home() {
-  const {
-    // eslint-disable-next-line no-unused-vars
-    user, setUser, authenticated, setAuthenticated,
-  } = useAuth();
-  const headers = {
-    'Content-Type': 'application/json',
-    withCredentials: true,
-  };
-  // eslint-disable-next-line no-unused-vars
-  const logOut = async () => {
-    try {
-      const response = await fetch('http://localhost:3001/api/v1/logout', {
-        method: 'DELETE',
-        headers,
-      });
+  // const {
+  //   setUser, authenticated, setAuthenticated,
+  // } = useAuth();
+  // const headers = {
+  //   'Content-Type': 'application/json',
+  //   withCredentials: true,
+  // };
 
-      if (response.ok) {
-        console.log('Logged out successfully');
-        setUser(null);
-        setAuthenticated(false);
-        window.location.href = '/';
-      } else {
-        const errorData = await response.json();
-        console.error('logout error:', errorData);
-      }
-    } catch (error) {
-      console.error('logout error:', error);
-    }
-  };
-  //  end logout method
+  const { authenticated } = useAuth();
 
-  // eslint-disable-next-line no-return-assign
+  const navigate = useNavigate();
+
+  // const logOut = async () => {
+  //   try {
+  //     const response = await fetch('http://localhost:3001/api/v1/logout', {
+  //       method: 'DELETE',
+  //       headers,
+  //     });
+
+  //     if (response.ok) {
+  //       console.log('Logged out successfully');
+  //       setUser(null);
+  //       setAuthenticated(false);
+  //       // window.location.href = '/';
+  //       navigate('/');
+  //     } else {
+  //       const errorData = await response.json();
+  //       console.error('logout error:', errorData);
+  //     }
+  //   } catch (error) {
+  //     console.error('logout error:', error);
+  //   }
+  // };
+
+  if (!authenticated) {
+    navigate('/');
+    return null;
+  }
+
   return (
     <div>
+      {/* <nav>
+        <button type="button" className="logout credentials" onClick={logOut}>Logout</button>
+      </nav> */}
+
+      {/* <h1>Welcome to the Home Component</h1>
+      <p>{user?.email}</p>
+      <p>
+        Logged in at:
+        {user?.created_at}
+      </p>
+
       {user && (
       <div className="alert alert-warning alert-dismissible fade show" role="alert">
         <p>
@@ -48,11 +65,16 @@ export default function Home() {
           {user.email}
         </p>
       </div>
-      )}
+      )}  */}
       <div className="home-layout">
-        <NavigationPanel />
-        <ItemsList />
+        <div className="nav-div">
+          <NavigationPanel />
+        </div>
+        <div className="routes-div">
+          <Outlet />
+        </div>
       </div>
+
     </div>
   );
 }

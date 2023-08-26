@@ -1,20 +1,3 @@
-.fixed-sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 250px;
-  overflow-y: auto;
-  font-size: 12px;
-  font-weight: 200;
-  height: 100vh;
-  color: #e1ffff;
-  border-right: #f7f7f7 2px solid;
-  padding: 20px 0 0 10px;
-  display: flex;
-  flex-direction: column;
-}
-
 .brand {
   background-color: #fff;
   height: 150px;
@@ -72,8 +55,11 @@ small {
   color: black;
 }
 
+/*
+ITEM LIST
+*/
+
 .content-container {
-  margin-left: 250px;
   text-align: center;
   padding: 100px;
   position: relative;

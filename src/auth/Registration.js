@@ -52,6 +52,8 @@ export default function Registration() {
 
   return (
     <form className="splash" onSubmit={handleSubmit}>
+      <img src="super-wheels-white-logo.svg" alt="logo" />
+
       <input
         type="email"
         name="email"
