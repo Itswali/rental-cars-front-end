@@ -39,9 +39,9 @@ export const addReservation = createAsyncThunk('car/reserveCar', async (payload)
   }
 });
 
-export const getReservations = createAsyncThunk('car/getReservation', async () => {
+export const getReservations = createAsyncThunk('car/getReservation', async (id) => {
   try {
-    const response = await axios.get(`${URL}/reservations`, {
+    const response = await axios.get(`${URL}/reservations?user_id=${id}`, {
       headers: {
         withCredentials: true,
       },

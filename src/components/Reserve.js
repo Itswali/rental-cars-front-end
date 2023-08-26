@@ -17,7 +17,9 @@ const Reserve = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(fetchCars());
+    if (user) {
+      dispatch(fetchCars(user.id));
+    }
   }, [dispatch, user]);
 
   const handleSelect = (e) => {
@@ -30,12 +32,11 @@ const Reserve = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (carId !== '' && date !== '') {
       try {
         dispatch(addReservation({
           reservation: {
-            user_id: 1,
+            user_id: user.id,
             item_id: carId,
             city,
             Date: date,
@@ -45,7 +46,7 @@ const Reserve = () => {
         setShowError(`Error occured: ${error}`);
       }
 
-      dispatch(getReservations());
+      dispatch(getReservations(user.id));
       navigate('/home/my_reservations');
     } else {
       setShowError('Please select a car and a date!');

@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getReservations } from '../app/features/car/carSlice';
+import { useAuth } from '../auth/AuthContext';
 
 const Reservation = () => {
+  const { user } = useAuth();
   const { reservations } = useSelector((store) => store?.car);
   const dispatch = useDispatch();
-
   useEffect(() => {
-    dispatch(getReservations());
-  }, [dispatch]);
+    dispatch(getReservations(user.id));
+  }, [dispatch, user]);
 
   return (
     <div className="reservations-container">
@@ -16,7 +17,7 @@ const Reservation = () => {
       <hr />
       <br />
       <div className="reservation-item-box">
-        {reservations?.map((item) => (
+        {reservations.map((item) => (
           <div key={item.id} className="reservation-item">
             <div className="res-img-box">
               <img src={item.image} alt="Car" className="res-img" />
