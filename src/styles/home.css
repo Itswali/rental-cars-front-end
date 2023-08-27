@@ -82,13 +82,15 @@ hr.dotted {
 
 .car-cards-container {
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 .car-cards {
   display: flex;
   gap: 30px;
+  flex-wrap: nowrap;
   transition: transform 0.3s ease-in-out;
 }
 

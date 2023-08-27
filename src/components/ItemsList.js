@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import DeleteItemButton from './DeleteItemButton';
 
 const ItemsList = () => {
@@ -13,39 +10,15 @@ const ItemsList = () => {
       .then((data) => setItems(data.data));
   }, []);
 
-  const handleDelete = (deletedItemId) => {
-    setItems(items.filter((item) => item.id !== deletedItemId));
+  const scrollContainerRef = React.createRef();
+
+  const handleScroll = (scrollOffset) => {
+    const container = scrollContainerRef.current;
+    container.scrollLeft += scrollOffset;
   };
 
-  const carouselSettings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+  const handleDelete = (deletedItemId) => {
+    setItems(items.filter((item) => item.id !== deletedItemId));
   };
 
   return (
@@ -57,27 +30,42 @@ const ItemsList = () => {
         <br />
       </div>
 
-      <div className="car-cards-container">
-        <Slider
-          dots={carouselSettings.dots}
-          infinite={carouselSettings.infinite}
-          speed={carouselSettings.speed}
-          slidesToShow={carouselSettings.slidesToShow}
-          slidesToScroll={carouselSettings.slidesToScroll}
-          responsive={carouselSettings.responsive}
-        >
+      <div className="car-cards-container" ref={scrollContainerRef}>
+        <div className="car-cards">
           {items.map((item) => (
-            <div className="card-item" key={item.id}>
-              <img src="toyota-auris.png" alt="" />
-              <img src={item.attributes.image_url} alt={item.attributes.title} />
+            <li className="card-item" key={item.id}>
+              <img
+                src={item.attributes.image_url}
+                alt={item.attributes.title}
+              />
               <h4>{item.attributes.title}</h4>
               <hr className="dotted" />
               <p>{item.attributes.description}</p>
-              <DeleteItemButton itemId={item.id} onDelete={() => handleDelete(item.id)} />
-            </div>
+              <DeleteItemButton
+                itemId={item.id}
+                onDelete={() => handleDelete(item.id)}
+              />
+            </li>
           ))}
-        </Slider>
+        </div>
       </div>
+
+      <button
+        className="scroll-button prev-button"
+        type="button"
+        aria-label="Scroll left"
+        onClick={() => handleScroll(-330)} // Adjust scroll value as needed
+      >
+        <i className="bi bi-caret-left" />
+      </button>
+      <button
+        className="scroll-button next-button"
+        type="button"
+        aria-label="Scroll right"
+        onClick={() => handleScroll(330)} // Adjust scroll value as needed
+      >
+        <i className="bi bi-caret-right" />
+      </button>
     </div>
   );
 };
