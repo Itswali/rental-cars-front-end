@@ -37,7 +37,7 @@ const Item = () => (
         <small><i className="bi bi-chevron-right" /></small>
       </button>
       <div className="color-wheel">
-        <img src="./images/Colorwheel.svg" alt="Color Wheel" />
+        <img src="Colorwheel.svg" alt="Color Wheel" />
       </div>
       <button className="book-btn" type="button">
         Book Test Drive
