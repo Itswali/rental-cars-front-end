@@ -58,7 +58,14 @@ const ItemsList = () => {
       </div>
 
       <div className="car-cards-container">
-        <Slider {...carouselSettings}>
+        <Slider
+          dots={carouselSettings.dots}
+          infinite={carouselSettings.infinite}
+          speed={carouselSettings.speed}
+          slidesToShow={carouselSettings.slidesToShow}
+          slidesToScroll={carouselSettings.slidesToScroll}
+          responsive={carouselSettings.responsive}
+        >
           {items.map((item) => (
             <div className="card-item" key={item.id}>
               <img src="toyota-auris.png" alt="" />
