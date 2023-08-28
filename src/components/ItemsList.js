@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import DeleteItemButton from './DeleteItemButton';
 
 const ItemsList = () => {
   const [items, setItems] = useState([]);
@@ -17,9 +16,11 @@ const ItemsList = () => {
     container.scrollLeft += scrollOffset;
   };
 
-  const handleDelete = (deletedItemId) => {
+  /* const handleDelete = (deletedItemId) => {
     setItems(items.filter((item) => item.id !== deletedItemId));
   };
+
+  */
 
   return (
     <div className="content-container">
@@ -41,10 +42,13 @@ const ItemsList = () => {
               <h4>{item.attributes.title}</h4>
               <hr className="dotted" />
               <p>{item.attributes.description}</p>
-              <DeleteItemButton
-                itemId={item.id}
-                onDelete={() => handleDelete(item.id)}
-              />
+              <div className="footer">
+                <div className="socials">
+                  <i className="bi bi-facebook" />
+                  <i className="bi bi-twitter" />
+                  <i className="bi bi-instagram" />
+                </div>
+              </div>
             </li>
           ))}
         </div>

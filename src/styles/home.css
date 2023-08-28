@@ -75,7 +75,8 @@ hr.dotted {
 }
 
 .car-cards li img {
-  width: 100%;
+  width: 50%;
+  height: 50%;
   background-color: #f7f7f7;
   border-radius: 10px;
 }
@@ -140,4 +141,9 @@ hr.dotted {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   position: absolute;
+}
+.socials i {
+  margin-right: 1rem;
+  color: #ccc;
+  border-radius: 50%;
 }
