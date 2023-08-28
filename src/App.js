@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import './App.css';
 import './styles/home.css';
 import React, { useEffect } from 'react';
@@ -15,9 +16,11 @@ import ItemsList from './components/ItemsList';
 
 function App() {
   const { authenticated } = useAuth();
+
   useEffect(() => {
 
   }, []);
+
   return (
     <div className="App">
       <AuthProvider>

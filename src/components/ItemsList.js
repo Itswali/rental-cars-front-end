@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import DeleteItemButton from './DeleteItemButton';
 
 const ItemsList = () => {
   const [items, setItems] = useState([]);
@@ -10,9 +9,10 @@ const ItemsList = () => {
       .then((data) => setItems(data?.data));
   }, []);
 
+  /*
   const handleDelete = (deletedItemId) => {
     setItems(items.filter((item) => item.id !== deletedItemId));
-  };
+  }; */
 
   return (
     <div className="content-container">
@@ -34,10 +34,6 @@ const ItemsList = () => {
               <h4>{item.attributes.title}</h4>
               <hr className="dotted" />
               <p>{item.attributes.description}</p>
-              <DeleteItemButton
-                itemId={item.id}
-                onDelete={() => handleDelete(item.id)}
-              />
             </li>
           ))}
         </div>
