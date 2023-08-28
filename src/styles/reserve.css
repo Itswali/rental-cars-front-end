@@ -53,7 +53,7 @@
 
 .select-value {
   padding: 1.2rem;
-  border-radius: 4rem;
+  border-radius: 0.8rem;
   background: transparent;
   color: white;
   margin-right: 2rem;
@@ -67,7 +67,7 @@
 
 .add-reservation {
   padding: 1.2rem 1.5rem;
-  border-radius: 4rem;
+  border-radius: 0.8rem;
   border: none;
   margin-top: 2rem;
   color: #0071bcf1;
@@ -109,7 +109,7 @@ RESERVATIONS
   font-size: 12px;
   font-weight: 200;
   color: #e1ffff;
-  border-right: #c0bebe 2px solid;
+  border-right: #f7f7f7 2px solid;
   height: 100%;
   padding: 20px 0 0 10px;
   display: flex;
