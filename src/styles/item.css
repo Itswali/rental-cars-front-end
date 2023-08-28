@@ -79,9 +79,3 @@
   border-bottom-right-radius: 30px;
 }
 
-
-.card-item > img:hover {
-  transform: scale(2);
-  transition: ease-out;
-  cursor: pointer;
-}
