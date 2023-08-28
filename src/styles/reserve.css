@@ -122,17 +122,16 @@ RESERVATIONS
 
 .reservations-container {
   width:70%;
-  margin: 0 auto;
+  margin-left: 2rem;
 }
 
 .reservation-item {
   display: flex;
   justify-content: flex-start;
   border: solid 1px #ddd;
-  /* border: solid 1px #0071bcf1; */
   border-radius: 1rem;
   margin-bottom: 1rem;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 0.5rem;
 }
 
@@ -153,6 +152,7 @@ RESERVATIONS
 .res-item-details {
   display: flex;
   flex-direction: column;
+  gap: 0.3rem;
   width: 100%;
 }
 
