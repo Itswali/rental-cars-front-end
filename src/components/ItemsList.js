@@ -15,7 +15,7 @@ const ItemsList = () => {
     const container = scrollContainerRef.current;
     container.scrollLeft += scrollOffset;
   };
-  
+
   return (
     <div className="content-container">
       <div className="heading">
