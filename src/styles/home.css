@@ -72,7 +72,6 @@ hr.dotted {
 
 .card-item {
   width: 300px;
-
 }
 
 .car-cards li img {
@@ -80,13 +79,11 @@ hr.dotted {
   height: 50%;
   background-color: #f7f7f7;
   border-radius: 50%;
-
 }
 
 .car-cards-container {
   display: flex;
   overflow: hidden;
-
   position: relative;
 }
 

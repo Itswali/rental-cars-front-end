@@ -102,6 +102,7 @@ RESERVATIONS
   background-size: cover;
   position: relative;
 }
+
 .modal-overlay {
   color: white;
   width: 100%;
@@ -115,18 +116,19 @@ RESERVATIONS
   display: flex;
   justify-content: center;
 }
- .modal ul {
+
+.modal ul {
   width: 300px;
-  height: auto; 
+  height: auto;
   color: #fff;
- box-shadow: 0px 1px 2px 2px rgba(255, 255, 255, 0.2);
- position:relative;
- text-align: justify;
+  box-shadow: 0 1px 2px 2px rgba(255, 255, 255, 0.2);
+  position: relative;
+  text-align: justify;
 }
 
 .modal ul li {
-  margin: .5rem 0;
-  padding: .8rem;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
 }
 
 .modal ul li button {
@@ -142,10 +144,11 @@ RESERVATIONS
 .note {
   position: absolute;
   bottom: 0;
-  left: .2rem;
+  left: 0.2rem;
   color: #fff;
   font-weight: 700;
 }
+
 .nav-div {
   width: 20%;
 }
