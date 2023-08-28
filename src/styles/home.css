@@ -143,7 +143,7 @@ hr.dotted {
   position: absolute;
 }
 
-.socials i {
+.car-cards > .card-item .socials i {
   margin-right: 1rem;
   color: #ccc;
   border-radius: 50%;
