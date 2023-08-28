@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import './App.css';
 import './styles/home.css';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Splash from './components/Splash';
 import Registration from './auth/Registration';
@@ -14,13 +15,9 @@ import ItemsList from './components/ItemsList';
 
 function App() {
   const { authenticated } = useAuth();
-  useEffect(() => {
-
-  }, []);
   return (
     <div className="App">
       <AuthProvider>
-        {/* <BrowserRouter> */}
         <Routes>
           <Route exact path="/registration" element={<Registration />} />
           <Route exact path="/login" element={<Login />} />
@@ -43,7 +40,6 @@ function App() {
           <Route exact path="/" element={<Splash />} />
 
         </Routes>
-        {/* </BrowserRouter> */}
       </AuthProvider>
     </div>
   );
