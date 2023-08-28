@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from React Router
 
 const ItemsList = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:3001/api/v1/items')
+    fetch('http://127.0.0.1:3000/api/v1/items')
       .then((response) => response.json())
       .then((data) => setItems(data.data));
   }, []);
@@ -15,12 +16,6 @@ const ItemsList = () => {
     const container = scrollContainerRef.current;
     container.scrollLeft += scrollOffset;
   };
-
-  /* const handleDelete = (deletedItemId) => {
-    setItems(items.filter((item) => item.id !== deletedItemId));
-  };
-
-  */
 
   return (
     <div className="content-container">
@@ -34,22 +29,24 @@ const ItemsList = () => {
       <div className="car-cards-container" ref={scrollContainerRef}>
         <div className="car-cards">
           {items.map((item) => (
-            <li className="card-item" key={item.id}>
-              <img
-                src={item.attributes.image_url}
-                alt={item.attributes.title}
-              />
-              <h4>{item.attributes.title}</h4>
-              <hr className="dotted" />
-              <p>{item.attributes.description}</p>
-              <div className="footer">
-                <div className="socials">
-                  <i className="bi bi-facebook" />
-                  <i className="bi bi-twitter" />
-                  <i className="bi bi-instagram" />
+            <div className="card-item" key={item.id}>
+              <Link to={`/home/details/${item.id}`} key={item.id}>
+                <img
+                  src={item.attributes.image_url}
+                  alt={item.attributes.title}
+                />
+                <h4>{item.attributes.title}</h4>
+                <hr className="dotted" />
+                <p>{item.attributes.description}</p>
+                <div className="footer">
+                  <div className="socials">
+                    <i className="bi bi-facebook" />
+                    <i className="bi bi-twitter" />
+                    <i className="bi bi-instagram" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </Link>
+            </div>
           ))}
         </div>
       </div>

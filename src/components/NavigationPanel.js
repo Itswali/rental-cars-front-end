@@ -8,7 +8,7 @@ const NavigationPanel = () => {
   const [error, setError] = useState(null); // Add error state
 
   useEffect(() => {
-    fetch('http://127.0.0.1:3001/api/v1/navigation_links')
+    fetch('http://127.0.0.1:3000/api/v1/navigation_links')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -28,7 +28,7 @@ const NavigationPanel = () => {
   // eslint-disable-next-line no-unused-vars
   const logOut = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/v1/logout', {
+      const response = await fetch('http://localhost:3000/api/v1/logout', {
         method: 'DELETE',
       });
 
