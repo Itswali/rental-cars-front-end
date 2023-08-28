@@ -79,9 +79,8 @@
 }
 
 textarea {
-  resize: vertical;
+  padding: 1rem 2rem;
   border-radius: 10px;
-  padding: 1rem;
 }
 
 .item-content form button {
