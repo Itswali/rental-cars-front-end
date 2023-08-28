@@ -48,9 +48,9 @@ html {
 }
 
 .splash input {
-  width: 40%;
+  width: 400px;
   height: auto;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
   border: none;
@@ -65,7 +65,7 @@ html {
   font-size: 1rem;
   border: 0;
   border-radius: 2rem;
-  width: 20%;
+  width: 400px;
   padding: 1rem;
   margin-bottom: 1rem;
 }

@@ -37,19 +37,24 @@ const AddItemForm = () => {
     }
   };
 
+  const handleTitleChange = (e) => {
+    const uppercaseTitle = e.target.value.toUpperCase();
+    setTitle(uppercaseTitle);
+  };
+
   return (
     <div className="item-container">
       <div className="overlay">
         <div className="item-content">
           <h2>Add New Car</h2>
-          <hr className="item-hr" />
+          {/* <hr className="item-hr" /> */}
           <form onSubmit={handleSubmit} className="form-container">
             <div className="input-div">
               <label>Title:</label>
               <input
                 type="text"
                 value={title}
-                onChange={(e) => setTitle(e.target.value)}
+                onChange={handleTitleChange}
                 className="item-select-value"
                 placeholder="Enter Car Name"
               />
@@ -67,7 +72,7 @@ const AddItemForm = () => {
               rows="10"
               cols="50"
               value={description}
-              placeholder="Enter Some car description"
+              placeholder="Enter car description"
               onChange={(e) => setDescription(e.target.value)}
               className="item-select-value"
             />

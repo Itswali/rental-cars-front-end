@@ -10,6 +10,7 @@ export default function Home() {
   const navigate = useNavigate();
   const [modalState, setModalState] = useState(false);
 
+
   if (!authenticated) {
     navigate('/');
     return null;
@@ -39,6 +40,16 @@ export default function Home() {
             </div>
           )
 }
+  return (
+    <div>
+      <div className="home-layout">
+        <div className="nav-div">
+          <NavigationPanel />
+        </div>
+        <div className="routes-div">
+          <Outlet />
+        </div>
+      </div>
     </div>
   );
 }

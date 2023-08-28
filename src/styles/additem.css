@@ -65,7 +65,7 @@
 }
 
 .item-select-value {
-  border-radius: 4rem;
+  border-radius: 0.5rem;
   background: transparent;
   color: white;
   margin: 1rem 0.5rem;
@@ -79,12 +79,12 @@
 }
 
 textarea {
-  border-radius: 0;
   padding: 1rem 2rem;
+  border-radius: 10px;
 }
 
-button[type="submit"] {
-  background-color: #007bff;
+.item-content form button {
+  background-color: #1b1464;
   color: white;
   border: none;
   border-radius: 5px;
@@ -93,6 +93,7 @@ button[type="submit"] {
   font-size: 16px;
 }
 
-button[type="submit"]:hover {
-  background-color: #0056b3;
+.item-content form button:hover {
+  background-color: #fff;
+  color: #1b1464;
 }

@@ -49,6 +49,7 @@
   display: flex;
   gap: 20px;
   color: black;
+  cursor: pointer;
 }
 
 small {
@@ -78,19 +79,36 @@ hr.dotted {
   width: 50%;
   height: 50%;
   background-color: #f7f7f7;
-  border-radius: 50%;
+  border-radius: 10px;
 }
 
 .car-cards-container {
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 .car-cards {
   display: flex;
   gap: 30px;
+  flex-wrap: nowrap;
   transition: transform 0.3s ease-in-out;
+}
+
+.card-item button {
+  padding: 5px 20px;
+  color: white;
+  background-color: #0071bc;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.card-item button:hover {
+  color: black;
+  background-color: #f7f7f7;
 }
 
 .scroll-button {
@@ -124,4 +142,11 @@ hr.dotted {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   position: absolute;
+}
+
+.car-cards > .card-item .socials i {
+  margin-right: 1rem;
+  color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
 }
