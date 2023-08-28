@@ -8,7 +8,7 @@ const Reservation = () => {
   const { reservations } = useSelector((store) => store?.car);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getReservations(user.id));
+    dispatch(getReservations(user?.id));
   }, [dispatch, user]);
 
   return (
