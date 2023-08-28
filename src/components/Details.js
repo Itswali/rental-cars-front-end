@@ -10,7 +10,7 @@ const Details = () => {
 
   useEffect(() => {
     // Fetch item data using the itemId
-    fetch(`http://127.0.0.1:3000/api/v1/items/${itemId}`)
+    fetch(`http://127.0.0.1:3001/api/v1/items/${itemId}`)
       .then((response) => response.json())
       .then((data) => setItem(data.data))
       .catch((error) => {
@@ -29,7 +29,7 @@ const Details = () => {
       </div>
 
       <div className="car-details">
-        <h2>{item.attributes.title}</h2>
+        <h2 className="title-car">{item.attributes.title}</h2>
         <table id="schedule">
           <tbody>
             <tr>
