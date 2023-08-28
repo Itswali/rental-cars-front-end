@@ -13,7 +13,7 @@ export default function DeleteDialog(props) {
     fetch('http://127.0.0.1:3001/api/v1/items')
       .then((response) => response.json())
       .then((data) => setItems(data?.data));
-  }, []);
+  }, [items]);
 
   const handleCheckbox = (id) => {
     if (checked.includes(id)) {
