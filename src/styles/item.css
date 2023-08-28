@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 2rem;
+  background-image: none;
   width: 100%;
   padding-top: 70px;
   padding-right: 3%;
@@ -77,3 +78,4 @@
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
+

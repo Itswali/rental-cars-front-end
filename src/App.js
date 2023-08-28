@@ -11,6 +11,7 @@ import Reservation from './components/Reservation';
 import Reserve from './components/Reserve';
 import AddItemForm from './action/additem';
 import ItemsList from './components/ItemsList';
+import Item from './components/Item';
 
 function App() {
   const { authenticated } = useAuth();
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/login" element={<Login />} />
           <Route path="/home" element={<Home />}>
             <Route index element={<ItemsList />} />
+            <Route path="/home/item" element={<Item />} />
             <Route path="add_item" element={<AddItemForm />} />
             <Route path="reserve" element={<Reserve />} />
             <Route path="reserve/:carParam" element={<Reserve />} />

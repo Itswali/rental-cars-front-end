@@ -16,12 +16,6 @@ const ItemsList = () => {
     container.scrollLeft += scrollOffset;
   };
 
-  /* const handleDelete = (deletedItemId) => {
-    setItems(items.filter((item) => item.id !== deletedItemId));
-  };
-
-  */
-
   return (
     <div className="content-container">
       <div className="heading">
