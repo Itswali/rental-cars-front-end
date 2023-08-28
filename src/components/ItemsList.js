@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import DeleteItemButton from './DeleteItemButton';
 
 const ItemsList = () => {
   const [items, setItems] = useState([]);
@@ -10,9 +9,18 @@ const ItemsList = () => {
       .then((data) => setItems(data.data));
   }, []);
 
-  const handleDelete = (deletedItemId) => {
+  const scrollContainerRef = React.createRef();
+
+  const handleScroll = (scrollOffset) => {
+    const container = scrollContainerRef.current;
+    container.scrollLeft += scrollOffset;
+  };
+
+  /* const handleDelete = (deletedItemId) => {
     setItems(items.filter((item) => item.id !== deletedItemId));
   };
+
+  */
 
   return (
     <div className="content-container">
@@ -23,7 +31,7 @@ const ItemsList = () => {
         <br />
       </div>
 
-      <div className="car-cards-container">
+      <div className="car-cards-container" ref={scrollContainerRef}>
         <div className="car-cards">
           {items.map((item) => (
             <li className="card-item" key={item.id}>
@@ -34,18 +42,23 @@ const ItemsList = () => {
               <h4>{item.attributes.title}</h4>
               <hr className="dotted" />
               <p>{item.attributes.description}</p>
-              <DeleteItemButton
-                itemId={item.id}
-                onDelete={() => handleDelete(item.id)}
-              />
+              <div className="footer">
+                <div className="socials">
+                  <i className="bi bi-facebook" />
+                  <i className="bi bi-twitter" />
+                  <i className="bi bi-instagram" />
+                </div>
+              </div>
             </li>
           ))}
         </div>
       </div>
+
       <button
         className="scroll-button prev-button"
         type="button"
         aria-label="Scroll left"
+        onClick={() => handleScroll(-330)} // Adjust scroll value as needed
       >
         <i className="bi bi-caret-left" />
       </button>
@@ -53,6 +66,7 @@ const ItemsList = () => {
         className="scroll-button next-button"
         type="button"
         aria-label="Scroll right"
+        onClick={() => handleScroll(330)} // Adjust scroll value as needed
       >
         <i className="bi bi-caret-right" />
       </button>
