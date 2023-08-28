@@ -12,7 +12,7 @@ const Details = () => {
     // Fetch item data using the itemId
     fetch(`http://127.0.0.1:3001/api/v1/items/${itemId}`)
       .then((response) => response.json())
-      .then((data) => setItem(data.data))
+      .then((data) => setItem(data?.data))
       .catch((error) => {
         console.error('Error fetching item:', error);
       });
