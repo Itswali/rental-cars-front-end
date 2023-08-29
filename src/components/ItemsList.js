@@ -10,15 +10,12 @@ const ItemsList = () => {
       .then((data) => setItems(data?.data));
   }, []);
 
-
   const scrollContainerRef = React.createRef();
 
   const handleScroll = (scrollOffset) => {
     const container = scrollContainerRef.current;
     container.scrollLeft += scrollOffset;
   };
-
-
 
   return (
     <div className="content-container">
@@ -33,22 +30,22 @@ const ItemsList = () => {
         <div className="car-cards">
           {items.map((item) => (
             <div className="card-item" key={item.id}>
-              <Link to={`/home/details/${item.id}`} key={item.id}>
-                <img
-                  src={item.attributes.image_url}
-                  alt={item.attributes.title}
-                />
-                <h4>{item.attributes.title}</h4>
-                <hr className="dotted" />
-                <p>{item.attributes.description}</p>
-                <div className="footer">
-                  <div className="socials">
-                    <i className="bi bi-facebook" />
-                    <i className="bi bi-twitter" />
-                    <i className="bi bi-instagram" />
-                  </div>
-                </div>
-              </Link>
+              <div className="img-container">
+                <Link to={`/home/details/${item.id}`} key={item.id}>
+                  <img
+                    src={item.attributes.image_url}
+                    alt={item.attributes.title}
+                  />
+                </Link>
+              </div>
+              <h4>{item.attributes.title}</h4>
+              <hr className="dotted" />
+              <p>{item.attributes.description}</p>
+              <div className="socials">
+                <i className="bi bi-facebook" />
+                <i className="bi bi-twitter" />
+                <i className="bi bi-instagram" />
+              </div>
             </div>
           ))}
         </div>

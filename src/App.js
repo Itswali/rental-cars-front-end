@@ -17,9 +17,6 @@ import Details from './components/Details'; // Import the Details component
 function App() {
   const { authenticated } = useAuth();
 
-
-
-
   return (
     <div className="App">
       <AuthProvider>
