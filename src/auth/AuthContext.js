@@ -16,11 +16,9 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem('authenticated', 'true');
     } else {
       localStorage.removeItem('authenticated');
-      // Clear user data on logout
       setUser(null);
     }
 
-    // Load user data from localStorage
     const storedUser = JSON.parse(localStorage.getItem('user'));
     if (storedUser) {
       setUser(storedUser);
