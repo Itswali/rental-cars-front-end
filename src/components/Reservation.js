@@ -8,7 +8,7 @@ const Reservation = () => {
   const { reservations } = useSelector((store) => store?.car);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getReservations(user.id));
+    dispatch(getReservations(user?.id));
   }, [dispatch, user]);
 
   return (
@@ -24,8 +24,8 @@ const Reservation = () => {
             </div>
             <div className="res-item-details">
               <p className="res-item-name">{item.car_name}</p>
-              <small className="res-item-city">{item.city}</small>
-              <small className="res-item-date">{item.Date}</small>
+              <small className="res-item-city">{`City: ${item.city}`}</small>
+              <small className="res-item-date">{`Date: ${item.Date}`}</small>
             </div>
           </div>
         ))}
