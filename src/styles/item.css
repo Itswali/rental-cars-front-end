@@ -11,9 +11,26 @@
   position: relative;
 }
 
+.details-container {
+  display: grid;
+  background: none;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  padding-top: 70px;
+  padding-right: 3%;
+ }
+
+.car-pic {
+  text-align: center;
+  margin-top: 2.3rem;
+}
+
 .car-pic img {
   top: 50%;
-  width: 100%;
+  width: 50%;
+  border-radius: 10px;
+
 }
 
 .car-details {

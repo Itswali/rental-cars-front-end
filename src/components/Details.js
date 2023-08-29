@@ -23,7 +23,7 @@ const Details = () => {
   }
 
   return (
-    <div className="item-container">
+    <div className="details-container">
       <div className="car-pic">
         <img src={item.attributes.image_url} alt={item.attributes.title} />
       </div>
