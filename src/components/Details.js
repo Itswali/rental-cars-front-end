@@ -61,7 +61,7 @@ const Details = () => {
           <img src="https://raw.githubusercontent.com/Itswali/rental-cars-front-end/123f11d020c2abb7447e1163d182657e10a8cf5c/public/Colorwheel.svg" alt="Color Wheel" />
         </div>
         <Link to="/home/reserve" className="book-btn">
-          Book Test Drive
+          Reserve
           {' '}
           <i className="bi bi-arrow-right-circle" />
         </Link>
