@@ -29,7 +29,7 @@ const Details = () => {
       </div>
 
       <div className="car-details">
-        <h2>{item.attributes.title}</h2>
+        <h2 className="title-car">{item.attributes.title}</h2>
         <table id="schedule">
           <tbody>
             <tr>

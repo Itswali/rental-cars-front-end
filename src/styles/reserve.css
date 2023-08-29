@@ -95,6 +95,60 @@ RESERVATIONS
   display: flex;
 }
 
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background: transparent url("../splash-back-img.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.modal-overlay {
+  color: white;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0071bcf1;
+  opacity: 0.95;
+  display: flex;
+  justify-content: center;
+}
+
+.modal ul {
+  width: 300px;
+  height: auto;
+  color: #fff;
+  box-shadow: 0 1px 2px 2px rgba(255, 255, 255, 0.2);
+  position: relative;
+  text-align: justify;
+}
+
+.modal ul li {
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+}
+
+.modal ul li button {
+  width: 90%;
+  margin: 2rem 0;
+}
+
+.modal ul li button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.note {
+  position: absolute;
+  bottom: 0;
+  left: 0.2rem;
+  color: #fff;
+  font-weight: 700;
+}
+
 .nav-div {
   width: 20%;
 }
@@ -116,28 +170,51 @@ RESERVATIONS
   flex-direction: column;
 }
 
+.reservations-h3 {
+  color: #0071bcf1;
+}
+
 .reservations-container {
-  width: 97%;
-  margin: 0 auto;
+  width: 70%;
+  margin-left: 2rem;
 }
 
 .reservation-item {
   display: flex;
-  gap: 1rem;
+  justify-content: flex-start;
+  border: solid 1px #ddd;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  gap: 1.5rem;
+  padding: 0.5rem;
 }
 
 .res-img-box {
-  width: 7rem;
-  height: 7rem;
+  aspect-ratio: 16/9;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1rem;
 }
 
 .res-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: inherit;
 }
 
 .res-item-details {
   display: flex;
   flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.res-item-name {
+  display: block;
+  width: 100%;
+  background-color: #0071bcf1;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }

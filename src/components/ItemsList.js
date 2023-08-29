@@ -5,9 +5,9 @@ const ItemsList = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:3000/api/v1/items')
+    fetch('http://127.0.0.1:3001/api/v1/items')
       .then((response) => response.json())
-      .then((data) => setItems(data.data));
+      .then((data) => setItems(data?.data));
   }, []);
 
   const scrollContainerRef = React.createRef();

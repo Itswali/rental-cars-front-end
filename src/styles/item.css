@@ -27,6 +27,10 @@
   text-align: left;
 }
 
+.title-car {
+  color: black;
+}
+
 #schedule tr:nth-child(odd) {
   background-color: lightgray;
 }

@@ -1,8 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import axios from 'axios';
 
-const URL = 'http://localhost:3000/api/v1';
+const URL = 'http://localhost:3001/api/v1';
 
 const initialState = {
   isLoading: false,

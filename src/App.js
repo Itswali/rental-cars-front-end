@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import './App.css';
 import './styles/home.css';
 import React from 'react';

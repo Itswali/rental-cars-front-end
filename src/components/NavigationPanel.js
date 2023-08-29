@@ -1,14 +1,18 @@
+/* eslint-disable no-console */
+/* eslint-disable no-nested-ternary */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './super-wheels-logo.svg';
 
-const NavigationPanel = () => {
+const NavigationPanel = (props) => {
+  // eslint-disable-next-line react/prop-types
+  const { setModalState } = props;
   const [navigationLinks, setNavigationLinks] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
   const [error, setError] = useState(null); // Add error state
 
   useEffect(() => {
-    fetch('http://127.0.0.1:3000/api/v1/navigation_links')
+    fetch('http://127.0.0.1:3001/api/v1/navigation_links')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -24,11 +28,13 @@ const NavigationPanel = () => {
         setLoading(false); // Loading is complete (with error)
       });
   }, []);
+  const openDialog = () => {
+    setModalState(true);
+  };
 
-  // eslint-disable-next-line no-unused-vars
   const logOut = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/v1/logout', {
+      const response = await fetch('http://localhost:3001/api/v1/logout', {
         method: 'DELETE',
       });
 
@@ -59,6 +65,7 @@ const NavigationPanel = () => {
   }
 
   return (
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div className="fixed-sidebar">
       <div className="brand">
         <img src={Logo} alt="Logo" />
@@ -72,9 +79,15 @@ const NavigationPanel = () => {
                 <Link to={link.link} onClick={logOut}>
                   {link.name}
                 </Link>
-              ) : (
-                <Link to={link.link}>{link.name}</Link>
-              )}
+              )
+                : link.name === 'Delete Car' ? (
+                  <Link to={link.link} onClick={openDialog}>
+                    {link.name}
+                  </Link>
+                )
+                  : (
+                    <Link to={link.link}>{link.name}</Link>
+                  )}
             </h3>
           </li>
         ))}
