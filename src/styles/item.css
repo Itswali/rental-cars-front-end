@@ -1,5 +1,6 @@
 .item-container {
   display: grid;
+  background: none;
   grid-template-columns: 3fr 1fr;
   gap: 2rem;
   background-image: none;
@@ -25,6 +26,10 @@
 #schedule td {
   padding: 10px;
   text-align: left;
+}
+
+.title-car {
+  color: black;
 }
 
 #schedule tr:nth-child(odd) {
