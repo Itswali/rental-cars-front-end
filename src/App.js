@@ -12,9 +12,11 @@ import Reservation from './components/Reservation';
 import Reserve from './components/Reserve';
 import AddItemForm from './action/additem';
 import ItemsList from './components/ItemsList';
+import Details from './components/Details'; // Import the Details component
 
 function App() {
   const { authenticated } = useAuth();
+
   return (
     <div className="App">
       <AuthProvider>
@@ -27,18 +29,19 @@ function App() {
             <Route path="reserve" element={<Reserve />} />
             <Route path="reserve/:carParam" element={<Reserve />} />
             <Route path="my_reservations" element={<Reservation />} />
+            {/* Add a nested route for item details */}
+            <Route path="/home/details/:itemId" element={<Details />} />
+
           </Route>
 
-          {
-            authenticated ? (
-              <Route path="/*" element={<Home />} />
-            ) : (
-              <Route path="*" element={<Splash />} />
-            )
-          }
+          {/* Redirect based on authentication */}
+          {authenticated ? (
+            <Route path="/*" element={<Home />} />
+          ) : (
+            <Route path="*" element={<Splash />} />
+          )}
 
           <Route exact path="/" element={<Splash />} />
-
         </Routes>
       </AuthProvider>
     </div>
