@@ -84,8 +84,8 @@ textarea {
 }
 
 .item-content form button {
-  background-color: #1b1464;
-  color: white;
+  background-color: #fff;
+  color: #0071bcf1 ;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;

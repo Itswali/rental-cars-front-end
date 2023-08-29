@@ -75,6 +75,11 @@ hr.dotted {
   width: 300px;
 }
 
+.card-item a {
+   text-decoration: none;
+   color: #000;
+}
+
 .car-cards li img {
   width: 50%;
   height: 50%;
@@ -149,4 +154,8 @@ hr.dotted {
   color: #ccc;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.description {
+    color: #ccc;
 }

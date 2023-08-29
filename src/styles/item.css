@@ -6,7 +6,9 @@
   width: 100%;
   padding-top: 70px;
   padding-right: 3%;
-
+  background: transparent url("../splash-back-img.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .car-pic img {

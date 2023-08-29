@@ -29,7 +29,8 @@ const ItemsList = () => {
       <div className="car-cards-container" ref={scrollContainerRef}>
         <div className="car-cards">
           {items.map((item) => (
-            <div className="card-item" key={item.id}>
+            <li className="card-item" key={item.id}>
+
               <Link to={`/home/details/${item.id}`} key={item.id}>
                 <img
                   src={item.attributes.image_url}
@@ -37,7 +38,7 @@ const ItemsList = () => {
                 />
                 <h4>{item.attributes.title}</h4>
                 <hr className="dotted" />
-                <p>{item.attributes.description}</p>
+                <p className="description">{item.attributes.description}</p>
                 <div className="footer">
                   <div className="socials">
                     <i className="bi bi-facebook" />
@@ -46,7 +47,7 @@ const ItemsList = () => {
                   </div>
                 </div>
               </Link>
-            </div>
+            </li>
           ))}
         </div>
       </div>
