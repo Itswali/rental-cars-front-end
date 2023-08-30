@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
-// import PropTypes from 'prop-types';
 import { Link, useParams } from 'react-router-dom';
 import '../styles/item.css';
 
