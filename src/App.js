@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import './App.css';
 import './styles/home.css';
+import './styles/nav.css';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Splash from './components/Splash';

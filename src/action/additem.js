@@ -50,24 +50,24 @@ const AddItemForm = () => {
           {/* <hr className="item-hr" /> */}
           <form onSubmit={handleSubmit} className="form-container">
             <div className="input-div">
-              <label>Title:</label>
+              {/* <label>Title:</label> */}
               <input
                 type="text"
                 value={title}
                 onChange={handleTitleChange}
                 className="item-select-value"
-                placeholder="Enter Car Name"
+                placeholder="Enter car name"
               />
-              <label>Image URL:</label>
+              {/* <label>Image URL:</label> */}
               <input
                 type="text"
                 value={imageURL}
                 className="item-select-value"
-                placeholder="Enter Image Url"
+                placeholder="Enter image URL"
                 onChange={(e) => setImageURL(e.target.value)}
               />
             </div>
-            <label>Description:</label>
+            {/* <label>Description:</label> */}
             <textarea
               rows="10"
               cols="50"

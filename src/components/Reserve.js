@@ -56,7 +56,7 @@ const Reserve = () => {
   if (isLoading) return <h3>Loading...</h3>;
 
   if (cars.length === 0) {
-    return (<h1>No cars to reserve</h1>);
+    return (<h2>No cars to reserve</h2>);
   }
 
   return (
@@ -65,7 +65,7 @@ const Reserve = () => {
       <div className="reserve-content">
 
         <span className="showError">{showError}</span>
-        <h2 className="reserve-h2">BOOK A SUPER-WHEELS RIDE</h2>
+        <h2 className="reserve-h2">BOOK A TEST DRIVE</h2>
         <hr className="reserve-hr" />
         <div className="message">Select a car, choose a date, enter a city, you&apos;re all set!</div>
 
