@@ -71,7 +71,7 @@ export default function DeleteDialog(props) {
               Delete
             </button>
           </li>
-          <small className="note">click anywhere outside this box to close the dialog</small>
+          <small className="note">Click anywhere outside this box to close the dialog</small>
         </ul>
       </div>
     </div>

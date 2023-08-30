@@ -13,7 +13,7 @@ const Reservation = () => {
 
   return (
     <div className="reservations-container">
-      <h3 className="reservations-h3">My reservations</h3>
+      <h3 className="reservations-h3">My Reservations</h3>
       <hr />
       <br />
       <div className="reservation-item-box">

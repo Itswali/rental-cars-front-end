@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types'; // Import PropTypes
-import { Link, useParams } from 'react-router-dom'; // Import useParams
+// import PropTypes from 'prop-types';
+import { Link, useParams } from 'react-router-dom';
 import '../styles/item.css';
 
 const Details = () => {
@@ -52,12 +52,14 @@ const Details = () => {
         <br />
         <Link to="/home" className="more-cars">
           More Cars
-          {' '}
           <i className="bi bi-chevron-right" />
         </Link>
 
         <div className="color-wheel">
-          <img src="https://raw.githubusercontent.com/Itswali/rental-cars-front-end/123f11d020c2abb7447e1163d182657e10a8cf5c/public/Colorwheel.svg" alt="Color Wheel" />
+          <img
+            src="https://raw.githubusercontent.com/Itswali/rental-cars-front-end/123f11d020c2abb7447e1163d182657e10a8cf5c/public/Colorwheel.svg"
+            alt="Color Wheel"
+          />
         </div>
         <Link to="/home/reserve" className="book-btn">
           Reserve
@@ -65,18 +67,14 @@ const Details = () => {
           <i className="bi bi-arrow-right-circle" />
         </Link>
       </div>
+
+      <Link to="/home">
+        <button type="button" className="scroll-button-2 prev-button-2">
+          <i className="bi bi-caret-left" />
+        </button>
+      </Link>
     </div>
   );
-};
-
-// Prop validation
-Details.propTypes = {
-  item: PropTypes.shape({
-    attributes: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      image_url: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
 };
 
 export default Details;
