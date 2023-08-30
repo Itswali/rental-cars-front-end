@@ -1,11 +1,20 @@
-import React from 'react';
+import React from "react";
 
 const MobileNavigationBar = () => {
   return (
     <div className="mobile-nav">
-      <button className="hamburger-button" type="button">
-        <i className="bi bi-list"></i>
-      </button>
+      <i className="bi bi-list-ul" />
+      <ul className="menu">
+        <li>
+          <a className="menu-item">Portfolio</a>
+        </li>
+        <li>
+          <a className="menu-item">About</a>
+        </li>
+        <li>
+          <a className="menu-item">Contact</a>
+        </li>
+      </ul>
       Test Data
     </div>
   );

@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  display: none;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s; /* Add a transition effect */
@@ -19,15 +19,15 @@
   }
 }
 
-.hamburger-button {
-  background: none;
+.mobile-nav button {
+  background-color: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
 }
 
-.bi-list {
-  width: 25px;
+.bi-list-ul {
+  font-size: 2rem;
   color: #fff;
   margin: 0;
 }
