@@ -293,4 +293,55 @@ TRY FROM HERE
   .routes-div {
     width: 100vw;
   }
+
+  /* CARDS */
+
+  .content-container {
+    height: 100vh;
+    padding: 1rem;
+  }
+
+  .content-container .heading {
+    width: 100%;
+  }
+
+  .content-container .heading h1 {
+    font-size: 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .car-cards-container {
+    height: 60vh;
+    padding: 0.3rem 1.5rem;
+  }
+
+  .card-item {
+    width: 100%;
+  }
+
+  .scroll-button {
+    top: 90%;
+    bottom: 1rem;
+    font-size: 24px;
+  }
+  
+  .prev-button {
+    left: 35%;
+    background-color: #0071bc;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100vw;
+    position: absolute;
+  }
+
+  .next-button {
+    right: 35%;
+    background-color: #0071bc;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100vw;
+    position: absolute;
+  }  
 }
