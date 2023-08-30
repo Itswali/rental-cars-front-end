@@ -55,7 +55,7 @@ const ItemsList = () => {
         className="scroll-button prev-button"
         type="button"
         aria-label="Scroll left"
-        onClick={() => handleScroll(-330)} // Adjust scroll value as needed
+        onClick={() => handleScroll(-330)}
       >
         <i className="bi bi-caret-left" />
       </button>
@@ -63,7 +63,7 @@ const ItemsList = () => {
         className="scroll-button next-button"
         type="button"
         aria-label="Scroll right"
-        onClick={() => handleScroll(330)} // Adjust scroll value as needed
+        onClick={() => handleScroll(330)}
       >
         <i className="bi bi-caret-right" />
       </button>
@@ -73,7 +73,7 @@ const ItemsList = () => {
           className="scroll-button-mobile"
           type="button"
           aria-label="Scroll left"
-          onClick={() => handleScroll(-330)} // Adjust scroll value as needed
+          onClick={() => handleScroll(-330)}
         >
           <i className="bi bi-arrow-left-circle" />
         </button>
@@ -81,7 +81,7 @@ const ItemsList = () => {
           className="scroll-button-mobile"
           type="button"
           aria-label="Scroll right"
-          onClick={() => handleScroll(330)} // Adjust scroll value as needed
+          onClick={() => handleScroll(330)}
         >
           <i className="bi bi-arrow-right-circle" />
         </button>

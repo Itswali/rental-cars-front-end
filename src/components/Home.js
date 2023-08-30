@@ -1,9 +1,8 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext';
 import NavigationPanel from './NavigationPanel';
-import DeleteDialog from './DeleteDialog';
+import MobileNavigationBar from './MobileNavigationBar';
 
 export default function Home() {
   const { authenticated } = useAuth();
@@ -24,6 +23,7 @@ export default function Home() {
 
   return (
     <div className="container">
+      <MobileNavigationBar />
       {
         modalState
           ? <DeleteDialog closeDialog={(e) => closeDialog(e)} />
@@ -31,14 +31,13 @@ export default function Home() {
             <div className="home-layout">
               <div className="nav-div">
                 <NavigationPanel setModalState={setModalState} />
-
               </div>
               <div className="routes-div">
                 <Outlet />
               </div>
             </div>
           )
-}
+      }
     </div>
   );
 }

@@ -32,7 +32,6 @@ function App() {
             <Route path="my_reservations" element={<Reservation />} />
             {/* Add a nested route for item details */}
             <Route path="/home/details/:itemId" element={<Details />} />
-
           </Route>
 
           {/* Redirect based on authentication */}
