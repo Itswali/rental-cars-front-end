@@ -60,6 +60,7 @@ const Details = () => {
             alt="Color Wheel"
           />
         </div>
+        <br />
         <Link to="/home/reserve" className="book-btn">
           Reserve
           {' '}

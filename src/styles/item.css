@@ -147,4 +147,60 @@
   .input-div label {
     display: none;
   }
+
+  /* DETAILS */
+
+  .details-container {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .car-pic {
+    width: 100%;
+    height: 30vh;
+    margin: 3rem auto 0;
+  }
+
+  .car-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: none;
+  }
+
+  .car-details {
+    width: 100%;
+  }
+
+  .title-car {
+    text-align: center;
+  }
+
+  .more-cars {
+    display: inline-block;
+    text-align: left;
+    color: black;
+  }
+
+  .book-btn {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+  .color-wheel {
+    display: none;
+  }
+
+  .prev-button-2 {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    width: 60px;
+    height: 50px;
+  }
 }
