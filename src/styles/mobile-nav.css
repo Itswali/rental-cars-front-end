@@ -1,5 +1,4 @@
-.mobile-navigation {
-  display: none;
+.mobile-nav {
   background-color: #0071bc;
   height: 70px;
   position: fixed;
@@ -7,19 +6,17 @@
   left: 0;
   width: 100%;
   z-index: 1000;
+  display: none;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.3s; /* Add a transition effect */
 }
 
 @media (max-width: 768px) {
-  .mobile-navigation {
-    display: block;
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
   }
-}
-
-.open {
-  height: 100vh;
-  overflow: hidden;
 }
 
 .hamburger-button {
@@ -29,9 +26,8 @@
   cursor: pointer;
 }
 
-.hamburger-icon {
-  swidth: 25px;
-  height: 50px;
+.bi-list {
+  width: 25px;
   color: #fff;
   margin: 0;
 }
