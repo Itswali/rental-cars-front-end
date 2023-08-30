@@ -152,5 +152,6 @@ hr.dotted {
 }
 
 .loginerror {
-  color: #ff0000;
+  color: #fff;
+  margin: .5rem;
 }

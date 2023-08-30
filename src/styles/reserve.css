@@ -71,7 +71,16 @@
   border: none;
   margin-top: 2rem;
   color: #fff;
-  background-color: #1b1464
+  background-color: #1b1464;
+}
+
+.add-reservation:hover {
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.8rem;
+  border: none;
+  margin-top: 2rem;
+  color:  #1b1464;
+  background-color: #fff;
 }
 
 option {

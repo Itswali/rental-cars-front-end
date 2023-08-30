@@ -76,7 +76,7 @@ const AddItemForm = () => {
               onChange={(e) => setDescription(e.target.value)}
               className="item-select-value"
             />
-            <button type="submit">Add</button>
+            <button type="submit" className="item-credentials">Add</button>
           </form>
         </div>
       </div>
