@@ -93,12 +93,6 @@ hr.dotted {
   object-fit:cover;
 }
 
-/* .card-item img {
-  width: 100%;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-} */
-
 .car-cards-container {
   display: flex;
   overflow-x: hidden;
@@ -155,4 +149,8 @@ hr.dotted {
 
 .description {
     color: #ccc;
+}
+
+.loginerror {
+  color: #ff0000;
 }
