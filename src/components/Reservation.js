@@ -14,7 +14,7 @@ const Reservation = () => {
   return (
     <div className="reservations-container">
       <h3 className="reservations-h3">My Reservations</h3>
-      <hr />
+      <hr className="reservation-hr" />
       <br />
       <div className="reservation-item-box">
         {reservations.map((item) => (

@@ -286,6 +286,8 @@ TRY FROM HERE
     background-color: white;
     width: 100vw;
     padding: 0.5rem;
+    border: solid 1px blue;
+    border-bottom: 1px solid #a5a5a5;
   }
 
   .routes-div {

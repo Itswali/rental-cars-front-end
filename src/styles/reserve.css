@@ -240,4 +240,32 @@ RESERVATIONS
   .date-label {
     margin-bottom: -0.05rem;
   }
+
+  /*
+  RESERVATION
+  */
+
+  .reservations-container {
+    margin: 0 auto;
+    padding: 0.2rem 0.4rem;
+    width: 98vw;
+  }
+
+  .reservations-h3 {
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .reservation-hr {
+    display: none;
+  }
+
+  .reservation-item {
+    flex-direction: column;
+  }
+
+  .res-img-box {
+    order: 2;
+    margin: 0 auto;
+  }
 }
