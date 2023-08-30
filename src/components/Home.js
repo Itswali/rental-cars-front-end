@@ -9,6 +9,21 @@ export default function Home() {
   const { authenticated } = useAuth();
   const navigate = useNavigate();
   const [modalState, setModalState] = useState(false);
+  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // const mobile = windowWidth <= 768;
+
+  // const handleResize = () => {
+  //   setWindowWidth(window.innerWidth);
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener('resize', handleResize);
+
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
 
   if (!authenticated) {
     navigate('/');
@@ -29,9 +44,18 @@ export default function Home() {
           ? <DeleteDialog closeDialog={(e) => closeDialog(e)} />
           : (
             <div className="home-layout">
+              {/* { mobile
+                ? (
+                  <div>
+                    In mobile--------
+                  </div>
+                ) : (
+                  <div className="nav-div">
+                    <NavigationPanel setModalState={setModalState} />
+                  </div>
+                )} */}
               <div className="nav-div">
                 <NavigationPanel setModalState={setModalState} />
-
               </div>
               <div className="routes-div">
                 <Outlet />

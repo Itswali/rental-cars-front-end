@@ -10,6 +10,15 @@ const NavigationPanel = (props) => {
   const [navigationLinks, setNavigationLinks] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
   const [error, setError] = useState(null); // Add error state
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const mobile = windowWidth < 768;
+
+  console.log(windowWidth); // DELETE THIS LINE
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
 
   useEffect(() => {
     fetch('http://127.0.0.1:3001/api/v1/navigation_links')
@@ -27,7 +36,14 @@ const NavigationPanel = (props) => {
         setError(error); // Set error state if fetch fails
         setLoading(false); // Loading is complete (with error)
       });
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
+
   const openDialog = () => {
     setModalState(true);
   };
@@ -65,10 +81,10 @@ const NavigationPanel = (props) => {
   }
 
   return (
-    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div className="fixed-sidebar">
       <div className="brand">
         <img src={Logo} alt="Logo" />
+        { mobile && (<div className="close-btn"><button type="button">X</button></div>)}
       </div>
 
       <ul className="menu-list">

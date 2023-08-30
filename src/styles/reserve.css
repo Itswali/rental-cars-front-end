@@ -167,18 +167,6 @@ RESERVATIONS
   overflow-x: auto;
 }
 
-.fixed-sidebar {
-  overflow-y: auto;
-  font-size: 12px;
-  font-weight: 200;
-  color: #e1ffff;
-  border-right: #f7f7f7 2px solid;
-  height: 100%;
-  padding: 20px 0 0 10px;
-  display: flex;
-  flex-direction: column;
-}
-
 .reservations-h3 {
   color: #0071bcf1;
 }

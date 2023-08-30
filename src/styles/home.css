@@ -1,3 +1,15 @@
+.fixed-sidebar {
+  overflow-y: auto;
+  font-size: 12px;
+  font-weight: 200;
+  color: #e1ffff;
+  border-right: #f7f7f7 2px solid;
+  height: 100%;
+  padding: 20px 0 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
 .brand {
   background-color: #fff;
   height: 150px;
@@ -154,4 +166,63 @@ hr.dotted {
 .loginerror {
   color: #fff;
   margin: .5rem;
+}
+
+/*
+TRY FROM HERE
+*/
+
+@media screen and (max-width: 768px) {
+  .fixed-sidebar {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    transform: translateY(-100vh);
+    transition: all 1s ease-in-out ;
+  }
+
+  .brand {
+    margin: none;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .close-btn button {
+    color: red;
+    background: transparent;
+    margin-right: 1rem;
+    margin-top: 0.3rem;
+    padding: 0.4rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    border: none;
+    outline: solid 1px #333;
+  }
+
+  .brand img {
+    width: 10rem;
+  }
+  
+  .menu-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
