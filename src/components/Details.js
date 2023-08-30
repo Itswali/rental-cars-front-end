@@ -9,7 +9,6 @@ const Details = () => {
   const [item, setItem] = useState(null);
 
   useEffect(() => {
-    // Fetch item data using the itemId
     fetch(`http://127.0.0.1:3001/api/v1/items/${itemId}`)
       .then((response) => response.json())
       .then((data) => setItem(data?.data))
