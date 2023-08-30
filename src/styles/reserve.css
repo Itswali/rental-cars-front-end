@@ -199,3 +199,45 @@ RESERVATIONS
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
+
+@media screen and (max-width: 768px) {
+  .reserve-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .reserve-content {
+    text-align: center;
+  }
+
+  .reserve-h2 {
+    margin-top: 5rem;
+    font-size: 1.2rem;
+  }
+
+  form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .select-value,
+  .date-label {
+    margin: 0 auto 1rem;
+    width: 100%;
+  }
+
+  .select-tag {
+    margin-top: 1rem;
+  }
+
+  .date-label {
+    margin-bottom: -0.05rem;
+  }
+}

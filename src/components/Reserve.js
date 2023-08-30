@@ -76,7 +76,7 @@ const Reserve = () => {
             onChange={handleSelect}
             defaultValue={carParam || carId}
             disabled={!!carParam}
-            className="select-value"
+            className="select-value select-tag"
           >
             {carParam
               ? (
@@ -95,7 +95,7 @@ const Reserve = () => {
                 </>
               )}
           </select>
-          <label htmlFor="date">
+          <label htmlFor="date" className="date-label">
             <input
               name="date"
               type="date"
