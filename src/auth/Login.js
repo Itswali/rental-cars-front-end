@@ -6,6 +6,10 @@ import { useAuth } from './AuthContext';
 export default function Login() {
   const { setAuthenticated, setUser } = useAuth();
   const navigate = useNavigate();
+  const [isError, setIsError] = useState({
+    status: false,
+    errMsg: '',
+  });
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -41,6 +45,10 @@ export default function Login() {
         navigate('/home');
       } else {
         const errorData = await response.json();
+        setIsError((prev) => ({
+          status: !prev.status,
+          errMsg: errorData,
+        }));
         console.error('login error:', errorData);
       }
     } catch (error) {
@@ -50,7 +58,12 @@ export default function Login() {
   return (
     <form className="splash" onSubmit={handleSubmit}>
       <img src="super-wheels-white-logo.svg" alt="logo" />
-
+      {isError.status
+       && (
+       <span className="loginerror">
+         {JSON.stringify(isError.errMsg)}
+       </span>
+       )}
       <input
         type="email"
         name="email"
