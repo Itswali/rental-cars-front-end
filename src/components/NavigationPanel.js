@@ -81,50 +81,107 @@ const NavigationPanel = (props) => {
   }
 
   return (
-    <div className="fixed-sidebar">
-      <div className="brand">
-        <img src={Logo} alt="Logo" />
-        { mobile && (<div className="close-btn"><button type="button">X</button></div>)}
-      </div>
-
-      <ul className="menu-list">
-        {navigationLinks?.map((link) => (
-          <li key={link.name}>
-            <h3>
-              {link.name === 'Sign Out' ? (
-                <Link to={link.link} onClick={logOut}>
-                  {link.name}
-                </Link>
-              )
-                : link.name === 'Delete Car' ? (
-                  <Link to={link.link} onClick={openDialog}>
-                    {link.name}
-                  </Link>
-                )
-                  : (
-                    <Link to={link.link}>{link.name}</Link>
-                  )}
-            </h3>
-          </li>
-        ))}
-      </ul>
-
-      <div className="footer">
-        <div className="socials">
-          <i className="bi bi-twitter" />
-          <i className="bi bi-facebook" />
-          <i className="bi bi-linkedin" />
-          <i className="bi bi-github" />
-          <i className="bi bi-instagram" />
+    <>
+      {mobile ? (
+        <div className="hamburger-box">
+          <button type="button" className="hamburger">
+            <i className="bi bi-list" />
+          </button>
         </div>
-        <br />
-        <small>
-          © 2023 SUPER WHEELS CAR RENTALS.
-          <br />
-          ALL RIGHTS RESERVED.
-        </small>
-      </div>
-    </div>
+      )
+        : (
+          <div className="fixed-sidebar">
+            <div className="brand">
+              <img src={Logo} alt="Logo" />
+              { mobile && (<div className="close-btn"><button type="button">X</button></div>)}
+            </div>
+
+            <ul className="menu-list">
+              {navigationLinks?.map((link) => (
+                <li key={link.name}>
+                  <h3>
+                    {link.name === 'Sign Out' ? (
+                      <Link to={link.link} onClick={logOut}>
+                        {link.name}
+                      </Link>
+                    )
+                      : link.name === 'Delete Car' ? (
+                        <Link to={link.link} onClick={openDialog}>
+                          {link.name}
+                        </Link>
+                      )
+                        : (
+                          <Link to={link.link}>{link.name}</Link>
+                        )}
+                  </h3>
+                </li>
+              ))}
+            </ul>
+
+            <div className="footer">
+              <div className="socials">
+                <i className="bi bi-twitter" />
+                <i className="bi bi-facebook" />
+                <i className="bi bi-linkedin" />
+                <i className="bi bi-github" />
+                <i className="bi bi-instagram" />
+              </div>
+              <br />
+              <small>
+                © 2023 SUPER WHEELS CAR RENTALS.
+                <br />
+                ALL RIGHTS RESERVED.
+              </small>
+            </div>
+          </div>
+        )}
+    </>
+
+  // <div className="fixed-sidebar">
+  //   <div className="brand">
+  //     <img src={Logo} alt="Logo" />
+  //     { mobile && (<div className="close-btn"><button type="button">X</button></div>)}
+  //   </div>
+
+  //   <ul className="menu-list">
+  //     {navigationLinks?.map((link) => (
+  //       <li key={link.name}>
+  //         <h3>
+  //           {link.name === 'Sign Out' ? (
+  //             <Link to={link.link} onClick={logOut}>
+  //               {link.name}
+  //             </Link>
+  //           )
+  //             : link.name === 'Delete Car' ? (
+  //               <Link to={link.link} onClick={openDialog}>
+  //                 {link.name}
+  //               </Link>
+  //             )
+  //               : (
+  //                 <Link to={link.link}>{link.name}</Link>
+  //               )}
+  //         </h3>
+  //       </li>
+  //     ))}
+  //   </ul>
+
+  //   <div className="footer">
+  //     <div className="socials">
+  //       <i className="bi bi-twitter" />
+  //       <i className="bi bi-facebook" />
+  //       <i className="bi bi-linkedin" />
+  //       <i className="bi bi-github" />
+  //       <i className="bi bi-instagram" />
+  //     </div>
+  //     <br />
+  //     <small>
+  //       © 2023 SUPER WHEELS CAR RENTALS.
+  //       <br />
+  //       ALL RIGHTS RESERVED.
+  //     </small>
+  //   </div>
+  // </div>
+
   );
 };
 

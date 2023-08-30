@@ -97,13 +97,6 @@ RESERVE +
 RESERVATIONS
 */
 
-.home-layout {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-}
-
 .modal {
   width: 100vw;
   height: 100vh;
@@ -156,15 +149,6 @@ RESERVATIONS
   left: 0.2rem;
   color: #fff;
   font-weight: 700;
-}
-
-.nav-div {
-  width: 20%;
-}
-
-.routes-div {
-  width: 80%;
-  overflow-x: auto;
 }
 
 .reservations-h3 {

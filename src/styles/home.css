@@ -1,3 +1,10 @@
+.home-layout {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
 .fixed-sidebar {
   overflow-y: auto;
   font-size: 12px;
@@ -66,6 +73,15 @@
 
 small {
   color: black;
+}
+
+.nav-div {
+  width: 20%;
+}
+
+.routes-div {
+  width: 80%;
+  overflow-x: auto;
 }
 
 /* Cards */
@@ -224,5 +240,35 @@ TRY FROM HERE
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .home-layout {
+    position: relative;
+  }
+
+  .hamburger-box {
+    text-align: right;
+  }
+
+  .hamburger {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+
+  .nav-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: white;
+    width: 100vw;
+    padding: 0.5rem;
+  }
+
+  .routes-div {
+    width: 100vw;
   }
 }
