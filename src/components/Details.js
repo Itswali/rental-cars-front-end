@@ -1,10 +1,6 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-import PropTypes from 'prop-types';
-=======
 // import PropTypes from 'prop-types';
->>>>>>> dev
 import { Link, useParams } from 'react-router-dom';
 import '../styles/item.css';
 
