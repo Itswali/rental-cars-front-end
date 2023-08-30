@@ -88,13 +88,6 @@ RESERVE +
 RESERVATIONS
 */
 
-.home-layout {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-}
-
 .modal {
   width: 100vw;
   height: 100vh;
@@ -158,18 +151,6 @@ RESERVATIONS
   overflow-x: auto;
 }
 
-.fixed-sidebar {
-  overflow-y: auto;
-  font-size: 12px;
-  font-weight: 200;
-  color: #e1ffff;
-  border-right: #f7f7f7 2px solid;
-  height: 100%;
-  padding: 20px 0 0 10px;
-  display: flex;
-  flex-direction: column;
-}
-
 .reservations-h3 {
   color: #0071bcf1;
 }
@@ -199,7 +180,7 @@ RESERVATIONS
 .res-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: inherit;
 }
 
@@ -217,4 +198,13 @@ RESERVATIONS
   color: white;
   padding: 0.5rem;
   border-radius: 0.5rem;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .routes-div {
+    width: 100%;
+    overflow-x: auto;
+  }
 }

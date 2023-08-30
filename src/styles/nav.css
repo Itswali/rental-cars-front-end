@@ -1,57 +1,77 @@
+.fixed-sidebar {
+	overflow-y: auto;
+	font-size: 12px;
+	font-weight: 200;
+	color: #e1ffff;
+	border-right: #f7f7f7 2px solid;
+	height: 100%;
+	padding: 20px 0 0 10px;
+	display: flex;
+	flex-direction: column;
+}
+
 .brand {
-  background-color: #fff;
-  height: 150px;
+	background-color: #fff;
+	height: 150px;
 }
 
 .brand img {
-  width: calc(80% - 20px);
+	width: calc(80% - 20px);
 }
 
 .menu-list {
-  flex: 1;
-  -ms-flex: 1;
+	flex: 1;
+	-ms-flex: 1;
 }
 
 .menu-list li {
-  padding: 5px 15px;
-  cursor: pointer;
-  background-color: white;
-  border: 0;
-  margin: 0;
-  text-transform: uppercase;
-  transition: background-color 0.3s, color 0.3s;
+	padding: 5px 15px;
+	cursor: pointer;
+	background-color: white;
+	border: 0;
+	margin: 0;
+	text-transform: uppercase;
+	transition: background-color 0.3s, color 0.3s;
 }
 
 .menu-list li a {
-  color: black;
+	color: black;
 }
 
 .menu-list li:hover {
-  padding: 5px 15px;
-  cursor: pointer;
-  background-color: #0071bc;
-  border: 0;
-  margin: 0;
-  text-transform: uppercase;
-  transition: background-color 0.3s, color 0.3s;
+	padding: 5px 15px;
+	cursor: pointer;
+	background-color: #0071bc;
+	border: 0;
+	margin: 0;
+	text-transform: uppercase;
+	transition: background-color 0.3s, color 0.3s;
 }
 
 .menu-list li:hover a {
-  color: white;
+	color: white;
 }
 
 .footer {
-  margin-bottom: 20px;
-  width: calc(100% - 20px);
+	margin-bottom: 20px;
+	width: calc(100% - 20px);
 }
 
 .fixed-sidebar .socials {
-  display: flex;
-  gap: 20px;
-  color: black;
-  cursor: pointer;
+	display: flex;
+	gap: 20px;
+	color: black;
+	cursor: pointer;
 }
 
 small {
-  color: black;
+	color: black;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+	.fixed-sidebar {
+		display: none;
+	}
 }

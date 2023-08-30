@@ -68,22 +68,24 @@ const ItemsList = () => {
         <i className="bi bi-caret-right" />
       </button>
 
-      <button
-        className="scroll-button prev-button"
-        type="button"
-        aria-label="Scroll left"
-        onClick={() => handleScroll(-330)} // Adjust scroll value as needed
-      >
-        <i className="bi bi-caret-left" />
-      </button>
-      <button
-        className="scroll-button next-button"
-        type="button"
-        aria-label="Scroll right"
-        onClick={() => handleScroll(330)} // Adjust scroll value as needed
-      >
-        <i className="bi bi-caret-right" />
-      </button>
+      <div className="mobile-scroll">
+        <button
+          className="scroll-button-mobile"
+          type="button"
+          aria-label="Scroll left"
+          onClick={() => handleScroll(-330)} // Adjust scroll value as needed
+        >
+          <i className="bi bi-arrow-left-circle" />
+        </button>
+        <button
+          className="scroll-button-mobile"
+          type="button"
+          aria-label="Scroll right"
+          onClick={() => handleScroll(330)} // Adjust scroll value as needed
+        >
+          <i className="bi bi-arrow-right-circle" />
+        </button>
+      </div>
 
     </div>
   );

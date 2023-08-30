@@ -1,3 +1,10 @@
+.home-layout {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
 .content-container {
   text-align: center;
   padding: 100px;
@@ -64,6 +71,10 @@ hr.dotted {
   color: #333;
 }
 
+.mobile-scroll {
+  display: none;
+}
+
 .prev-button {
   left: 0;
   background-color: #0071bc;
@@ -91,4 +102,40 @@ hr.dotted {
   gap: 20px;
   color: gray;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-div {
+    display: none;
+  }
+
+  .home-layout {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .content-container {
+    padding: 25px;
+    position: static;
+  }
+
+  .prev-button,
+  .next-button {
+    display: none;
+  }
+
+  .mobile-scroll {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .scroll-button-mobile {
+    color: #0071bc;
+    font-size: 2rem;
+    border: none;
+  }
 }
