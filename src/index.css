@@ -79,3 +79,10 @@ html {
   text-decoration: none;
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  .splash input,
+  .splash button {
+    width: 70vw;
+  }
+}
