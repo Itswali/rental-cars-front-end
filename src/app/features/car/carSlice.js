@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const URL = 'http://supercars-73m2.onrender.com/api/v1';
+const URL = 'https://supercars-73m2.onrender.com/api/v1';
 
 const initialState = {
   isLoading: false,
