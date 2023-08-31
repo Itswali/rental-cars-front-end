@@ -17,10 +17,14 @@ const Reserve = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    if (carParam) {
+      setCarId(carParam);
+    }
+
     if (user) {
       dispatch(fetchCars(user.id));
     }
-  }, [dispatch, user]);
+  }, [dispatch, user, carParam]);
 
   const handleSelect = (e) => {
     setCarId(e.target.value);
@@ -32,12 +36,12 @@ const Reserve = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (carId !== '' && date !== '') {
+    if (date !== '') {
       try {
         dispatch(addReservation({
           reservation: {
             user_id: user.id,
-            item_id: carId,
+            item_id: parseInt(carId, 2),
             city,
             Date: date,
           },
