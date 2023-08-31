@@ -14,7 +14,7 @@ import AddItemForm from './action/additem';
 import ItemsList from './components/ItemsList';
 import Details from './components/Details'; // Import the Details component
 
-function App() {
+const App = () => {
   const { authenticated } = useAuth();
 
   return (

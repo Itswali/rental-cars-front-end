@@ -4,7 +4,7 @@
 /* eslint-disable no-console */
 import React, { useState, useEffect } from 'react';
 
-export default function DeleteDialog(props) {
+const DeleteDialog = (props) => {
   // eslint-disable-n ext-line no-unused-vars
   const { closeDialog } = props;
   // eslint-disable-next-line no-unused-vars
@@ -76,4 +76,5 @@ export default function DeleteDialog(props) {
       </div>
     </div>
   );
-}
+};
+export default DeleteDialog;

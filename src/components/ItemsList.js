@@ -40,7 +40,7 @@ const ItemsList = () => {
               </div>
               <h4>{item.attributes.title}</h4>
               <hr className="dotted" />
-              <p>{item.attributes.description}</p>
+              <p>{`${item.attributes.description.substring(0, 100)}...`}</p>
               <div className="socials">
                 <i className="bi bi-facebook" />
                 <i className="bi bi-twitter" />

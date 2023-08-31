@@ -5,7 +5,7 @@ import { useAuth } from '../auth/AuthContext';
 import NavigationPanel from './NavigationPanel';
 import DeleteDialog from './DeleteDialog';
 
-export default function Home() {
+const Home = () => {
   const { authenticated } = useAuth();
   const navigate = useNavigate();
   const [modalState, setModalState] = useState(false);
@@ -31,7 +31,6 @@ export default function Home() {
             <div className="home-layout">
               <div className="nav-div">
                 <NavigationPanel setModalState={setModalState} />
-
               </div>
               <div className="routes-div">
                 <Outlet />
@@ -41,4 +40,5 @@ export default function Home() {
 }
     </div>
   );
-}
+};
+export default Home;

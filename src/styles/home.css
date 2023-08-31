@@ -1,3 +1,22 @@
+.home-layout {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.fixed-sidebar {
+  overflow-y: auto;
+  font-size: 12px;
+  font-weight: 200;
+  color: #e1ffff;
+  border-right: #f7f7f7 2px solid;
+  height: 100%;
+  padding: 20px 0 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
 .brand {
   background-color: #fff;
   height: 150px;
@@ -24,6 +43,7 @@
 
 .menu-list li a {
   color: black;
+  position: relative;
 }
 
 .menu-list li:hover {
@@ -54,6 +74,15 @@
 
 small {
   color: black;
+}
+
+.nav-div {
+  width: 20%;
+}
+
+.routes-div {
+  width: 80%;
+  overflow-x: auto;
 }
 
 /* Cards */
@@ -90,7 +119,7 @@ hr.dotted {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit:cover;
+  object-fit: cover;
 }
 
 .car-cards-container {
@@ -148,10 +177,172 @@ hr.dotted {
 }
 
 .description {
-    color: #ccc;
+  color: #ccc;
 }
 
 .loginerror {
   color: #fff;
-  margin: .5rem;
+  margin: 0.5rem;
+}
+
+.menu-list li h3 a.active-nav {
+  width: 100%;
+
+  /* height: 100%; */
+  display: flex;
+  color: white;
+  padding: 5px 15px;
+  background-color: #0071bc;
+  border: 0;
+  margin: 0;
+}
+
+/*
+TRY FROM HERE
+*/
+
+@media screen and (max-width: 768px) {
+  .fixed-sidebar {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    transition: all 0.6s ease-in-out;
+    transform: translateY(-120vh);
+    display: none;
+  }
+
+  .show-mobile-nav {
+    display: flex;
+    transform: none;
+  }
+
+  .brand {
+    margin: 0;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .close-btn button {
+    color: red;
+    font-size: 1rem;
+    font-weight: bolder;
+    background: transparent;
+    margin-right: 1rem;
+    margin-top: 0.3rem;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    border: none;
+    outline: solid 1px #333;
+  }
+
+  .brand img {
+    width: 10rem;
+  }
+
+  .menu-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-layout {
+    position: relative;
+  }
+
+  .hamburger-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+
+  .nav-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    background-color: white;
+    width: 100vw;
+    padding: 0.5rem;
+    border: solid 1px blue;
+    border-bottom: 1px solid #a5a5a5;
+  }
+
+  .routes-div {
+    width: 100vw;
+  }
+
+  /* CARDS */
+
+  .content-container {
+    height: 100vh;
+    padding: 1rem;
+  }
+
+  .content-container .heading {
+    width: 100%;
+  }
+
+  .content-container .heading h1 {
+    font-size: 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .car-cards-container {
+    height: 60vh;
+    padding: 0.3rem 1.5rem;
+  }
+
+  .card-item {
+    width: 100%;
+  }
+
+  .scroll-button {
+    top: 90%;
+    bottom: 1rem;
+    font-size: 24px;
+  }
+
+  .prev-button {
+    left: 35%;
+    background-color: #0071bc;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100vw;
+    position: absolute;
+  }
+
+  .next-button {
+    right: 35%;
+    background-color: #0071bc;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100vw;
+    position: absolute;
+  }
 }
