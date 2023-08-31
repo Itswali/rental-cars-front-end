@@ -11,7 +11,6 @@ const NavigationPanel = (props) => {
   const [loading, setLoading] = useState(true); // Add loading state
   const [error, setError] = useState(null); // Add error state
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  // const [openMobileNav, setOpenMobileNav] = useState(false);
 
   const mobile = windowWidth < 768;
 
@@ -19,7 +18,6 @@ const NavigationPanel = (props) => {
 
   const handleNav = () => {
     navRef.current.classList.toggle('show-mobile-nav');
-    // setOpenMobileNav((prev) => !prev);
   };
 
   const location = useLocation();
@@ -94,6 +92,9 @@ const NavigationPanel = (props) => {
     <>
       {mobile && (
         <div className="hamburger-box">
+          <div className="hamburger-box-logo">
+            <img src={Logo} alt="Logo" />
+          </div>
           <button type="button" className="hamburger" onClick={handleNav}>
             <i className="bi bi-list" />
           </button>

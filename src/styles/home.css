@@ -267,7 +267,8 @@ TRY FROM HERE
   }
 
   .hamburger-box {
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
   }
 
   .hamburger {
@@ -324,7 +325,7 @@ TRY FROM HERE
     bottom: 1rem;
     font-size: 24px;
   }
-  
+
   .prev-button {
     left: 35%;
     background-color: #0071bc;
@@ -343,5 +344,5 @@ TRY FROM HERE
     height: 40px;
     border-radius: 100vw;
     position: absolute;
-  }  
+  }
 }
