@@ -1,70 +1,173 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 📗 Table of Contents
 
-## Available Scripts
+- [� Table of Contents](#-table-of-contents)
+- [📖 Rental Cars ](#-rental-cars-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+    - [Backend Part of the Project](#backend-part-of-the-project)
+    - [Live Demo ](#live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+  - [👤 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
-In the project directory, you can run:
+# 📖 Rental Cars <a name="about-project"></a>
 
-### `npm start`
+> This Rental Cars Frontend is a React application that serves as the frontend for a rental car appointment booking system. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠 Built With <a name="built-with"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Tech Stack <a name="tech-stack"></a>
 
-### `npm test`
+Client: <a href="https://react.dev/">React JS</a></li><br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- Features -->
 
-### `npm run build`
+### Key Features <a name="key-features"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Item Management:** Create, read, update, and delete car items for rent.<br>
+**Reservation:** Allow users to make reservations for available items.<br>
+**User Authentication:** User registration, login, and logout using Devise.<br>
+**Navigation Links:** Retrieve navigation links for the user interface.<br>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend Part of the Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Rental Cars Backend](https://github.com/Itswali/Rental-Cars)
 
-### `npm run eject`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Live Demo <a name="live-demo"></a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Not yet available.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 💻 Getting Started <a name="getting-started"></a>
 
-## Learn More
+To get a local copy up and running, follow these steps.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+In order to run this project you need the following installed on your computer:<br>
+React,<br>
+Ruby v3+,<br>
+Rails v7+<br>
+PostgreSQL<br>
+An IDE e.g. [Visual Studio Code](https://code.visualstudio.com/)<br>
+A terminal e.g. [Git BASH](https://gitforwindows.org/)
 
-### Code Splitting
+### Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Clone this repository to your local machine:
 
-### Analyzing the Bundle Size
+```
+git clone https://github.com/Itswali/rental-cars-front-end
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Install npm, Ruby, Rails, and PostgreSQL if not already installed.
 
-### Making a Progressive Web App
+Navigate to the directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+cd rental-cars-front-end
+```
 
-### Advanced Configuration
+### Install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Install npm dependencies:
 
-### Deployment
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Usage
 
-### `npm run build` fails to minify
+Start the npm server with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+npm start
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 👤 Authors <a name="authors"></a>
+
+👤 **Wali Muhammad**
+
+- GitHub [link](https://github.com/Itswali)
+- Twitter [link](https://twitter.com/WaliMuh94818599)
+- LinkedIn [link](https://www.linkedin.com/in/its-wali/)
+
+👤 **Samuel Obuobi Lartey**
+
+- GitHub [link](https://github.com/kwesiobuobi)
+- Twitter [link](https://twitter.com/kwesi_obuobi)
+- LinkedIn [link](https://www.linkedin.com/in/kwesi-obuobi/)
+
+👤 **Riyaz Ahmed**
+
+- GitHub [link](https://github.com/r-ahmed2022)
+- Twitter [link](https://twitter.com/RiyazAhmed)
+- LinkedIn [link](https://www.linkedin.com/in/riyaz-ahmed-4216a71a8/)
+
+👤 **Jonah Wambua**
+
+- GitHub [link](https://github.com/DJ-MrJay)
+- Twitter [link](https://twitter.com/jonah_wambua)
+- LinkedIn [link](https://www.linkedin.com/in/jonah-wambua/)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+**Search and Filtering:**
+Implement advanced search and filtering options for users to easily find available cars based on criteria like location, date, type, etc.
+
+**Availability Calendar:**
+Add a calendar view that displays item availability, making it easier for users to choose available dates for reservations.
+
+**Payment Integration:**
+Integrate with a payment gateway to allow users to make payments for reservations directly through the API.
+
+**Mobile App Integration:**
+Building a companion mobile app to provide users with a convenient way to manage reservations and browse cars.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome. Contributions to improve and extend the API backend are also welcome. If you find bugs, have suggestions for improvements, or want to add new features, please feel free to add an issue on the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ⭐️ Show your support <a name="support"></a>
+
+Give a ⭐️ if you like this project.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- [Microverse](https://www.microverse.org) for a A+ curriculum
+- Code reviewers, coding partners, morning and standup teams for the great insights
+- Hat tip to anyone else whose code was used
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
