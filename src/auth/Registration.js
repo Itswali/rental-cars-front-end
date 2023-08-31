@@ -27,7 +27,7 @@ export default function Registration() {
     };
 
     try {
-      const response = await fetch('http://localhost:3001/api/v1/signup', {
+      const response = await fetch('https://supercars-73m2.onrender.com/api/v1/signup', {
         method: 'POST',
         headers,
         body: JSON.stringify(formData),

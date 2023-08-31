@@ -8,7 +8,7 @@ const Details = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:3001/api/v1/items/${itemId}`)
+    fetch(`http://https://supercars-73m2.onrender.com/api/v1/items/${itemId}`)
       .then((response) => response.json())
       .then((data) => setItem(data?.data))
       .catch((error) => {

@@ -28,7 +28,7 @@ const NavigationPanel = (props) => {
   };
 
   useEffect(() => {
-    fetch('http://127.0.0.1:3001/api/v1/navigation_links')
+    fetch('https://supercars-73m2.onrender.com/api/v1/navigation_links')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
