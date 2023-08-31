@@ -12,7 +12,7 @@ const AddItemForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://127.0.0.1:3001/api/v1/items', {
+    const response = await fetch('http://supercars-73m2.onrender.com/api/v1/items', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
