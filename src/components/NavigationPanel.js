@@ -21,7 +21,6 @@ const NavigationPanel = (props) => {
   };
 
   const location = useLocation();
-  console.log(location);
   const activeNav = (path) => location.pathname === path;
 
   const handleResize = () => {
