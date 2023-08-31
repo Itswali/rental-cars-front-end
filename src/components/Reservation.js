@@ -17,7 +17,7 @@ const Reservation = () => {
       <hr className="reservation-hr" />
       <br />
       <div className="reservation-item-box">
-        {reservations.map((item) => (
+        {reservations?.map((item) => (
           <div key={item.id} className="reservation-item">
             <div className="res-img-box">
               <img src={item.image} alt="Car" className="res-img" />
