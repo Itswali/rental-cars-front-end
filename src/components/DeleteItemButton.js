@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const DeleteItemButton = ({ itemId, onDelete }) => {
   const handleDelete = async () => {
-    const response = await fetch(`http://supercars-73m2.onrender.com/api/v1/items/${itemId}`, {
+    const response = await fetch(`https://supercars-73m2.onrender.com/api/v1/items/${itemId}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

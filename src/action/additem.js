@@ -12,7 +12,7 @@ const AddItemForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://supercars-73m2.onrender.com/api/v1/items', {
+    const response = await fetch('https://supercars-73m2.onrender.com/api/v1/items', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

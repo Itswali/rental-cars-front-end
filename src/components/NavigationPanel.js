@@ -57,7 +57,7 @@ const NavigationPanel = (props) => {
 
   const logOut = async () => {
     try {
-      const response = await fetch('http://supercars-73m2.onrender.com/api/v1/logout', {
+      const response = await fetch('https://supercars-73m2.onrender.com/api/v1/logout', {
         method: 'DELETE',
       });
 
