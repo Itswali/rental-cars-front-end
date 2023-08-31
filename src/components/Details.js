@@ -1,24 +1,33 @@
-/* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
-// import PropTypes from 'prop-types';
 import { Link, useParams } from 'react-router-dom';
 import '../styles/item.css';
 
 const Details = () => {
   const { itemId } = useParams();
   const [item, setItem] = useState(null);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     fetch(`http://127.0.0.1:3001/api/v1/items/${itemId}`)
       .then((response) => response.json())
       .then((data) => setItem(data?.data))
       .catch((error) => {
-        console.error('Error fetching item:', error);
+        setError(`Error fetching item: ${error}`);
       });
   }, [itemId]);
 
   if (!item) {
     return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return (
+      <div>
+        Error...
+        {' '}
+        {error}
+      </div>
+    );
   }
 
   return (
@@ -61,7 +70,8 @@ const Details = () => {
             alt="Color Wheel"
           />
         </div>
-        <Link to="/home/reserve" className="book-btn">
+        <br />
+        <Link to={`/home/reserve/${itemId}`} className="book-btn">
           Reserve
           {' '}
           <i className="bi bi-arrow-right-circle" />

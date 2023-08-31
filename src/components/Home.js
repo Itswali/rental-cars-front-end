@@ -31,7 +31,6 @@ export default function Home() {
             <div className="home-layout">
               <div className="nav-div">
                 <NavigationPanel setModalState={setModalState} />
-
               </div>
               <div className="routes-div">
                 <Outlet />

@@ -47,7 +47,6 @@ const AddItemForm = () => {
       <div className="overlay">
         <div className="item-content">
           <h2>Add New Car</h2>
-          {/* <hr className="item-hr" /> */}
           <form onSubmit={handleSubmit} className="form-container">
             <div className="input-div">
               <label>Title:</label>
