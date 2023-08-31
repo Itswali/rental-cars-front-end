@@ -1,0 +1,273 @@
+.reserve-container {
+  color: white;
+  width: 100%;
+  height: 100%;
+  background: transparent url("../splash-back-img.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  color: white;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0071bcf1;
+  opacity: 0.95;
+}
+
+.reserve-content {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+}
+
+.reserve-content form {
+  text-align: center;
+}
+
+.reserve-hr {
+  color: white;
+  background: white;
+  width: 50%;
+  height: 1px;
+  border-radius: 4px;
+}
+
+.message {
+  font-size: 0.8rem;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.select-value {
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  background: transparent;
+  color: white;
+  margin-right: 2rem;
+  border: none;
+  outline: solid 2px white;
+}
+
+.select-value::placeholder {
+  color: white;
+}
+
+.add-reservation {
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.8rem;
+  border: none;
+  margin-top: 2rem;
+  color: #fff;
+  background-color: #1b1464;
+}
+
+.add-reservation:hover {
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.8rem;
+  border: none;
+  margin-top: 2rem;
+  color: #1b1464;
+  background-color: #fff;
+}
+
+option {
+  background: white;
+  color: black;
+}
+
+.showError {
+  color: red;
+}
+
+/*
+RESERVE +
+RESERVATIONS
+*/
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background: transparent url("../splash-back-img.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.modal-overlay {
+  color: white;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0071bcf1;
+  opacity: 0.95;
+  display: flex;
+  justify-content: center;
+}
+
+.modal ul {
+  width: 300px;
+  height: auto;
+  color: #fff;
+  box-shadow: 0 1px 2px 2px rgba(255, 255, 255, 0.2);
+  position: relative;
+  text-align: justify;
+}
+
+.modal ul li {
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+}
+
+.modal ul li button {
+  width: 90%;
+  margin: 2rem 0;
+}
+
+.modal ul li button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.note {
+  position: absolute;
+  bottom: 0;
+  left: 0.2rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.reservations-h3 {
+  color: #0071bcf1;
+}
+
+.reservations-container {
+  width: 70%;
+  margin-left: 2rem;
+}
+
+.reservation-item {
+  display: flex;
+  justify-content: flex-start;
+  border: solid 1px #ddd;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+
+.res-img-box {
+  aspect-ratio: 16/9;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1rem;
+}
+
+.res-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.res-item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.res-item-name {
+  display: block;
+  width: 100%;
+  background-color: #0071bcf1;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .reserve-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .reserve-content {
+    text-align: center;
+  }
+
+  .reserve-h2 {
+    margin-top: 5rem;
+    font-size: 1.2rem;
+  }
+
+  form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .select-value,
+  .date-label {
+    margin: 0 auto 1rem;
+    width: 100%;
+  }
+
+  .select-tag {
+    margin-top: 1rem;
+  }
+
+  .date-label {
+    margin-bottom: -0.05rem;
+  }
+
+  /*
+  RESERVATION
+  */
+
+  .reservations-container {
+    margin: 0 auto;
+    padding: 0.2rem 0.4rem;
+    width: 98vw;
+  }
+
+  .reservations-h3 {
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .reservation-hr {
+    display: none;
+  }
+
+  .reservation-item {
+    flex-direction: column;
+  }
+
+  .res-img-box {
+    order: 2;
+    margin: 0 auto;
+    width: 100%;
+    height: 40vw;
+  }
+}

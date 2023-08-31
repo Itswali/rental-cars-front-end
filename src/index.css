@@ -1,0 +1,88 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.splash {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0071bcf1;
+  z-index: -1;
+}
+
+.splash::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/splash-back-img.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.splash img {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  width: 200px;
+}
+
+.splash input {
+  width: 400px;
+  height: auto;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.credentials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b1464;
+  color: #fff;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 2rem;
+  width: 400px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.credentials:hover {
+  background-color: #fff;
+  color: #1b1464;
+}
+
+.splash a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .splash input,
+  .splash button {
+    width: 70vw;
+  }
+}

@@ -1,0 +1,348 @@
+.home-layout {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.fixed-sidebar {
+  overflow-y: auto;
+  font-size: 12px;
+  font-weight: 200;
+  color: #e1ffff;
+  border-right: #f7f7f7 2px solid;
+  height: 100%;
+  padding: 20px 0 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  background-color: #fff;
+  height: 150px;
+}
+
+.brand img {
+  width: calc(80% - 20px);
+}
+
+.menu-list {
+  flex: 1;
+  -ms-flex: 1;
+}
+
+.menu-list li {
+  padding: 5px 15px;
+  cursor: pointer;
+  background-color: white;
+  border: 0;
+  margin: 0;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-list li a {
+  color: black;
+  position: relative;
+}
+
+.menu-list li:hover {
+  padding: 5px 15px;
+  cursor: pointer;
+  background-color: #0071bc;
+  border: 0;
+  margin: 0;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-list li:hover a {
+  color: white;
+}
+
+.footer {
+  margin-bottom: 20px;
+  width: calc(100% - 20px);
+}
+
+.fixed-sidebar .socials {
+  display: flex;
+  gap: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+small {
+  color: black;
+}
+
+.nav-div {
+  width: 20%;
+}
+
+.routes-div {
+  width: 80%;
+  overflow-x: auto;
+}
+
+/* Cards */
+
+.content-container {
+  text-align: center;
+  padding: 100px;
+  position: relative;
+}
+
+hr.dotted {
+  border-top: 2px dotted #f7f7f7;
+  width: 100px;
+}
+
+.card-item {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-container {
+  width: 300px;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.car-cards-container {
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.car-cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease-in-out;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+
+.prev-button {
+  left: 0;
+  background-color: #0071bc;
+  color: #fff;
+  width: 80px;
+  height: 60px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: absolute;
+}
+
+.next-button {
+  right: 0;
+  background-color: #0071bc;
+  color: #fff;
+  width: 80px;
+  height: 60px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  position: absolute;
+}
+
+.card-item .socials {
+  display: flex;
+  gap: 20px;
+  color: lightgray;
+  cursor: pointer;
+}
+
+.description {
+  color: #ccc;
+}
+
+.loginerror {
+  color: #fff;
+  margin: 0.5rem;
+}
+
+.menu-list li h3 a.active-nav {
+  width: 100%;
+
+  /* height: 100%; */
+  display: flex;
+  color: white;
+  padding: 5px 15px;
+  background-color: #0071bc;
+  border: 0;
+  margin: 0;
+}
+
+/*
+TRY FROM HERE
+*/
+
+@media screen and (max-width: 768px) {
+  .fixed-sidebar {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    transition: all 0.6s ease-in-out;
+    transform: translateY(-120vh);
+    display: none;
+  }
+
+  .show-mobile-nav {
+    display: flex;
+    transform: none;
+  }
+
+  .brand {
+    margin: 0;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .close-btn button {
+    color: red;
+    font-size: 1rem;
+    font-weight: bolder;
+    background: transparent;
+    margin-right: 1rem;
+    margin-top: 0.3rem;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    border: none;
+    outline: solid 1px #333;
+  }
+
+  .brand img {
+    width: 10rem;
+  }
+
+  .menu-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-layout {
+    position: relative;
+  }
+
+  .hamburger-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+
+  .nav-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    background-color: white;
+    width: 100vw;
+    padding: 0.5rem;
+    border: solid 1px blue;
+    border-bottom: 1px solid #a5a5a5;
+  }
+
+  .routes-div {
+    width: 100vw;
+  }
+
+  /* CARDS */
+
+  .content-container {
+    height: 100vh;
+    padding: 1rem;
+  }
+
+  .content-container .heading {
+    width: 100%;
+  }
+
+  .content-container .heading h1 {
+    font-size: 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .car-cards-container {
+    height: 60vh;
+    padding: 0.3rem 1.5rem;
+  }
+
+  .card-item {
+    width: 100%;
+  }
+
+  .scroll-button {
+    top: 90%;
+    bottom: 1rem;
+    font-size: 24px;
+  }
+
+  .prev-button {
+    left: 35%;
+    background-color: #0071bc;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100vw;
+    position: absolute;
+  }
+
+  .next-button {
+    right: 35%;
+    background-color: #0071bc;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100vw;
+    position: absolute;
+  }
+}
