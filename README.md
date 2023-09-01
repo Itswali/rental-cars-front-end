@@ -105,9 +105,9 @@ npm start
 
 👤 **Wali Muhammad**
 
-- GitHub [link](https://github.com/Itswali)
-- Twitter [link](https://twitter.com/WaliMuh94818599)
-- LinkedIn [link](https://www.linkedin.com/in/its-wali/)
+- GitHub [Wali-Muhammad](https://github.com/Itswali)
+- Twitter [Wali-Muhammad](https://twitter.com/WaliMuh94818599)
+- LinkedIn [Wali-Muhammad](https://www.linkedin.com/in/its-wali/)
 
 👤 **Samuel Obuobi Lartey**
 
