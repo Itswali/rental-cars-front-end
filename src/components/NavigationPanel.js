@@ -37,7 +37,7 @@ const NavigationPanel = (props) => {
       })
       .then((data) => {
         setNavigationLinks(data);
-        setLoading(false); // Data has been loaded
+        setLoading(false);
       })
       .catch((error) => {
         setError(error); // Set error state if fetch fails
