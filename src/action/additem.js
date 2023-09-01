@@ -28,7 +28,6 @@ const AddItemForm = () => {
     });
 
     if (response.ok) {
-      // Item created successfully, you can handle redirects or UI updates here
       console.log('Item created successfully');
       history('/home');
     } else {
