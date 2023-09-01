@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 /* eslint-disable no-console */
 /* eslint-disable react/button-has-type */
 import React from 'react';
