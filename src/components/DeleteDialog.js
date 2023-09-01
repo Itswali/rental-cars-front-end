@@ -47,7 +47,6 @@ const DeleteDialog = (props) => {
       <div className="modal-overlay" onClick={closeDialog}>
         <ul>
           { items?.map((item) => (
-          // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
             <li key={item.id}>
               <input
                 type="checkbox"
