@@ -43,7 +43,6 @@ const DeleteDialog = (props) => {
   };
   // end code
   return (
-    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div className="modal">
       <div className="modal-overlay" onClick={closeDialog}>
         <ul>
