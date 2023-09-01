@@ -14,7 +14,7 @@ const DeleteItemButton = ({ itemId, onDelete }) => {
 
     if (response.ok) {
       console.log('Item deleted successfully');
-      onDelete(); // Trigger the onDelete function to update the item list
+      onDelete();
     } else {
       const data = await response.json();
       console.error('Error deleting item:', data.errors);
