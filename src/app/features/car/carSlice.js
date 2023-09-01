@@ -18,7 +18,6 @@ export const fetchCars = createAsyncThunk('car/getUCars', async () => {
       },
     });
 
-    // The serialized response has a 'data' array attribute
     return response.data.data;
   } catch (err) {
     return err.message;
