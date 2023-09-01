@@ -4,9 +4,7 @@
 import React, { useState, useEffect } from 'react';
 
 const DeleteDialog = (props) => {
-  // eslint-disable-n ext-line no-unused-vars
   const { closeDialog } = props;
-  // eslint-disable-next-line no-unused-vars
   const [items, setItems] = useState([]);
   const [checked, setChecked] = useState([]);
   useEffect(() => {
