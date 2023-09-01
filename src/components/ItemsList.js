@@ -55,7 +55,7 @@ const ItemsList = () => {
         className="scroll-button prev-button"
         type="button"
         aria-label="Scroll left"
-        onClick={() => handleScroll(-330)} // Adjust scroll value as needed
+        onClick={() => handleScroll(-330)}
       >
         <i className="bi bi-caret-left" />
       </button>
