@@ -22,7 +22,6 @@ const DeleteDialog = (props) => {
   };
   // small code
   const handleDelete = () => {
-    // Make an API call to delete the checked items
     const checkedIds = checked.join(',');
     fetch(`https://supercars-73m2.onrender.com/api/v1/items/delete?ids=${checkedIds}`, {
       method: 'DELETE',
