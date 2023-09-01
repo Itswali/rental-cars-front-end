@@ -40,7 +40,7 @@ const NavigationPanel = (props) => {
         setLoading(false);
       })
       .catch((error) => {
-        setError(error); // Set error state if fetch fails
+        setError(error);
         setLoading(false);
       });
 
