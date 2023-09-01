@@ -41,7 +41,7 @@ const NavigationPanel = (props) => {
       })
       .catch((error) => {
         setError(error); // Set error state if fetch fails
-        setLoading(false); // Loading is complete (with error)
+        setLoading(false);
       });
 
     window.addEventListener('resize', handleResize);
