@@ -8,7 +8,7 @@ const NavigationPanel = (props) => {
   // eslint-disable-next-line react/prop-types
   const { setModalState } = props;
   const [navigationLinks, setNavigationLinks] = useState([]);
-  const [loading, setLoading] = useState(true); // Add loading state
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null); // Add error state
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
