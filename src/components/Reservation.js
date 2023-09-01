@@ -22,6 +22,7 @@ const Reservation = () => {
             <div className="res-img-box">
               <img src={item.image} alt="Car" className="res-img" />
             </div>
+
             <div className="res-item-details">
               <p className="res-item-name">{item.car_name}</p>
               <small className="res-item-city">{`City: ${item.city}`}</small>
