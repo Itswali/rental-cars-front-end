@@ -110,6 +110,7 @@ const Reserve = () => {
               required
             />
           </label>
+
           <input
             type="text"
             placeholder="city"
