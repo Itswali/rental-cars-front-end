@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-console */
 import React, { useState, useEffect } from 'react';
