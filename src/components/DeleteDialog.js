@@ -20,7 +20,7 @@ const DeleteDialog = (props) => {
       setChecked([...checked, id]);
     }
   };
-  // small code
+
   const handleDelete = () => {
     const checkedIds = checked.join(',');
     fetch(`https://supercars-73m2.onrender.com/api/v1/items/delete?ids=${checkedIds}`, {
