@@ -7,6 +7,7 @@ const DeleteDialog = (props) => {
   const { closeDialog } = props;
   const [items, setItems] = useState([]);
   const [checked, setChecked] = useState([]);
+
   useEffect(() => {
     fetch('https://supercars-73m2.onrender.com/api/v1/items')
       .then((response) => response.json())
@@ -41,7 +42,7 @@ const DeleteDialog = (props) => {
         console.error('Error deleting items:', error);
       });
   };
-  // end code
+
   return (
     <div className="modal">
       <div className="modal-overlay" onClick={closeDialog}>
