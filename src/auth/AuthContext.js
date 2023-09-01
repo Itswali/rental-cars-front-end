@@ -26,7 +26,6 @@ export const AuthProvider = ({ children }) => {
   }, [authenticated]);
 
   useEffect(() => {
-    // Save user data to localStorage
     if (user) {
       localStorage.setItem('user', JSON.stringify(user));
     } else {
