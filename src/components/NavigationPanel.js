@@ -9,7 +9,7 @@ const NavigationPanel = (props) => {
   const { setModalState } = props;
   const [navigationLinks, setNavigationLinks] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null); // Add error state
+  const [error, setError] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const mobile = windowWidth < 768;
