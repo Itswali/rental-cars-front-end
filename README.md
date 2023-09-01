@@ -23,7 +23,7 @@
 
 # 📖 Rental Cars <a name="about-project"></a>
 
-> This Rental Cars Frontend is a React application that serves as the frontend for a rental car appointment booking system. 
+> This Rental Cars Frontend is a React application that serves as the frontend for a rental car appointment booking system.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -49,7 +49,7 @@ Client: <a href="https://react.dev/">React JS</a></li><br>
 
 ### Live Demo <a name="live-demo"></a>
 
-Not yet available.
+Coming soon...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
