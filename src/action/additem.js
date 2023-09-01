@@ -7,7 +7,7 @@ import '../styles/additem.css';
 const AddItemForm = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [imageURL, setImageURL] = useState(''); // New state for image URL
+  const [imageURL, setImageURL] = useState('');
   const history = useNavigate();
 
   const handleSubmit = async (e) => {
