@@ -36,7 +36,7 @@ export default function Registration() {
       if (response.ok) {
         const data = await response.json();
         const authToken = data.token; // Retrieve the token from the response
-        localStorage.setItem('authToken', authToken); // Store the token in localStorage
+        localStorage.setItem('authToken', authToken);
 
         setAuthenticated(true);
         setUser(data.user);
