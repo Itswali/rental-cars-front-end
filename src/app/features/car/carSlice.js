@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const URL = 'https://rental-cars-xyha.onrender.comapi/v1';
+const URL = 'https://rental-cars-xyha.onrender.com/api/v1';
 
 const initialState = {
   isLoading: false,

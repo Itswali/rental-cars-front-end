@@ -5,7 +5,7 @@ const ItemsList = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('https://rental-cars-xyha.onrender.comapi/v1/items')
+    fetch('https://rental-cars-xyha.onrender.com/api/v1/items')
       .then((response) => response.json())
       .then((data) => setItems(data?.data));
   }, []);
