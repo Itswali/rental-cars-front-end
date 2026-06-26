@@ -8,7 +8,7 @@ const Details = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch(`https://rental-cars-xyha.onrender.comapi/v1/items/${itemId}`)
+    fetch(`https://rental-cars-xyha.onrender.com/api/v1/items/${itemId}`)
       .then((response) => response.json())
       .then((data) => setItem(data?.data))
       .catch((error) => {
