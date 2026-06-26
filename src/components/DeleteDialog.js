@@ -9,7 +9,7 @@ const DeleteDialog = (props) => {
   const [checked, setChecked] = useState([]);
 
   useEffect(() => {
-    fetch('https://supercars-73m2.onrender.com/api/v1/items')
+    fetch('https://rental-cars-xyha.onrender.comapi/v1/items')
       .then((response) => response.json())
       .then((data) => setItems(data?.data));
   }, [items]);
@@ -24,7 +24,7 @@ const DeleteDialog = (props) => {
 
   const handleDelete = () => {
     const checkedIds = checked.join(',');
-    fetch(`https://supercars-73m2.onrender.com/api/v1/items/delete?ids=${checkedIds}`, {
+    fetch(`https://rental-cars-xyha.onrender.comapi/v1/items/delete?ids=${checkedIds}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

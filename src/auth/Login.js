@@ -31,7 +31,7 @@ export default function Login() {
     };
 
     try {
-      const response = await fetch('https://supercars-73m2.onrender.com/api/v1/login', {
+      const response = await fetch('https://rental-cars-xyha.onrender.comapi/v1/login', {
         method: 'POST',
         headers,
         body: JSON.stringify(formData),

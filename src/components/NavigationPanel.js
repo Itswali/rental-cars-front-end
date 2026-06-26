@@ -28,7 +28,7 @@ const NavigationPanel = (props) => {
   };
 
   useEffect(() => {
-    fetch('https://supercars-73m2.onrender.com/api/v1/navigation_links')
+    fetch('https://rental-cars-xyha.onrender.comapi/v1/navigation_links')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -57,7 +57,7 @@ const NavigationPanel = (props) => {
 
   const logOut = async () => {
     try {
-      const response = await fetch('https://supercars-73m2.onrender.com/api/v1/logout', {
+      const response = await fetch('https://rental-cars-xyha.onrender.comapi/v1/logout', {
         method: 'DELETE',
       });
 
